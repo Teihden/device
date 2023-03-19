@@ -1,5 +1,4 @@
 # Project "Device"
-[![Actions Status](https://github.com/Teihden/device/workflows/hexlet-check/badge.svg)](https://github.com/Teihden/device/actions)
 [![CI](https://github.com/Teihden/device/actions/workflows/CI.yml/badge.svg)](https://github.com/Teihden/device/actions/workflows/CI.yml)
 [![Github Pages](https://github.com/Teihden/device/actions/workflows/github-pages.yml/badge.svg)](https://github.com/Teihden/device/actions/workflows/github-pages.yml)
 
