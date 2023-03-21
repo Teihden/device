@@ -1,0 +1,67 @@
+//- includes/page-header.pug
+
+header.page-header
+  h1.visually-hidden Магазин Device
+  nav
+    a.link.logo-link(href="#no_scroll")
+      img(src="img/logos/logo-header.svg" width="145" height="36" alt="Логотип магазина Device.")
+    .flex-container
+      form(action="https://echo.htmlacademy.ru" method="get")
+        label.search-label
+          input.search-input#search(type="search" name="search-page" placeholder="Поиск по сайту" required)
+          span.visually-hidden Поиск по сайту
+        button.search-button.place-center(type="submit") #[span Найти]
+      ul.navigation-user
+        li.login
+          a.link.user-link.login-link(href="#no_scroll") Войти
+        li
+          a.link.user-link.logout-link.logout-closed(href="#no_scroll") Выйти
+        li.compare
+          a.link.user-link.compare-link(href="#no_scroll") Сравнить
+        li.cart
+          a.link.user-link.cart-link(href="#no_scroll") #[span.place-center 2] Корзина
+          .shopping-cart
+            ul
+              li.cart-item
+                a.link.cart-item-link
+                  img(src="img/shopping-cart/product-1.jpg" width="39" height="43" alt="Любительская селфи-палка.")
+                  p Любительская селфи-палка
+                button.link(type="button" aria-label="Закрыть.")
+              li.cart-item
+                a.link.cart-item-link
+                  img(src="img/shopping-cart/product-2.jpg" width="39" height="43" alt="Профессиональная селфи-палка.")
+                  p Профессиональная селфи-палка
+                button.link(type="button" aria-label="Закрыть.")
+            .summary
+              p
+                span Товаров:
+                output 2
+              p
+                span Сумма:
+                output 2000 ₽
+            a.cart-link-more.place-center.heading-2(href="#no_scroll") #[span Открыть корзину]
+    ul.navigation-list
+      li.catalog-list
+        a.heading-2.catalog-heading.catalog-heading-closed(href="#no_scroll") Каталог товаров
+        .catalog-container
+          ul.catalog-sublist
+            li
+              a.link(href="#no_scroll") Виртуальная реальность
+            li
+              a.link(href="#no_scroll") Моноподы для cелфи
+            li
+              a.link(href="#no_scroll") Экшн-камеры
+          ul.catalog-sublist
+            li
+              a.link(href="#no_scroll") Фитнес-браслеты
+            li
+              a.link(href="#no_scroll") Умные часы
+          ul.catalog-sublist
+            li
+              a.link(href="#no_scroll") Квадрокоптеры
+      li.heading-2
+        a.heading-2.link.list-item(href="#no_scroll") Доставка
+      li.heading-2
+        a.heading-2.link.list-item(href="#no_scroll") Гарантия
+      li.heading-2
+        a.heading-2.link.list-item(href="#no_scroll") Контакты

@@ -30,7 +30,7 @@ const lintBuildSass = () => {
       fix: true
     }))
     .pipe(sass({
-      outputStyle: "compressed" // compressed | expanded
+      outputStyle: "expanded" // compressed | expanded
     }))
     .pipe(dest("build/css/"));
 };
@@ -70,7 +70,7 @@ const buildPug = () => {
 
   return src("src/pug/pages/*.pug")
     .pipe(pug({
-      pretty: null, // null | true
+      pretty: true, // null | true
       doctype: "html"
     }))
     .pipe(dest("build/"))

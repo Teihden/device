@@ -1,0 +1,109 @@
+// Initial setups
+@font-face {
+  font-family: Rubik;
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/Rubik-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: Rubik;
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/Rubik-Bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: Raleway;
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/Raleway-ExtraBold.woff2") format("woff2");
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-width: 1240px;
+  margin: 0;
+  font-family: Rubik, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  color: $dark;
+  background-color: $white;
+}
+
+main {
+  flex-grow: 1;
+}
+
+//Heading
+
+.heading-1 {
+  font-family: Raleway;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 50px;
+  color: $black;
+}
+
+.heading-2 {
+  font-family: Raleway;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: $black;
+}
+
+.heading-4 {
+  font-family: Rubik;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  color: $black;
+}
+
+// Paragraphs
+.text-bold {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  letter-spacing: -0.02em;
+  color: $black;
+}
+
+// Links
+.link {
+  display: block;
+  text-decoration: none;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:focus {
+    outline: 2px solid $purple;
+    outline-offset: 2px;
+  }
+
+  &:active {
+    outline: none;
+    opacity: 0.3;
+  }
+}
