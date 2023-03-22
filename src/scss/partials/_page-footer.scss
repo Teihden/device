@@ -1,0 +1,199 @@
+.page-footer {
+  color: $white;
+  background-color: $dark;
+}
+
+.footer-container {
+  position: relative;
+  display: grid;
+  grid-template-columns: 240px 640px 240px;
+  gap: 35px 20px;
+  width: 1160px;
+  padding: 62px 0 61px;
+  margin: 0 auto;
+
+  &::before {
+    grid-area: 3 / 1 / 4 / 2;
+    margin: 29px 0 0 1px;
+    content: "";
+    left: 0;
+    bottom: 0;
+    display: block;
+    height: 7px;
+    width: 80px;
+    background-color: $yellow-dark;
+  }
+}
+
+.footer-logo-link {
+  grid-column: 1 / -1;
+  width: 145px;
+  height: 36px;
+
+  img {
+    display: block;
+  }
+}
+
+.address {
+  font-size: 16px;
+  line-height: 20px;
+  margin: 0;
+
+}
+
+.footer-navigation-list {
+  max-width: 640px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 34px;
+  padding: 0;
+  margin: 5px auto 0;
+  list-style: none;
+
+  a {
+    display: block;
+    color: $white;
+    text-decoration: none;
+
+    &:hover {
+      color: $yellow-dark;
+      text-decoration: underline solid $yellow-dark;
+      text-decoration-thickness: 2px;
+      text-underline-position: under;
+      text-underline-offset: 4px;
+    }
+
+    &:focus {
+      outline: 2px solid $purple;
+      outline-offset: 2px;
+    }
+
+    &:active {
+      outline: none;
+      text-decoration: underline solid $yellow-dark;
+      text-decoration-thickness: 2px;
+      text-underline-position: under;
+      text-underline-offset: 4px;
+      opacity: 0.3;
+    }
+  }
+}
+
+.telephone {
+  justify-self: right;
+  min-width: 174px;
+  margin: 7px 0 0;
+  font-size: 16px;
+  line-height: 20px;
+
+  a {
+    font-size: 16px;
+    line-height: 20px;
+    color: $white;
+    text-decoration-skip-ink: none;
+    text-underline-position: underline;
+    text-underline-offset: 1px;
+
+    &:hover {
+      color: $yellow-dark;
+      text-decoration-color: $yellow-dark;
+    }
+
+    &:focus {
+      outline: 2px solid $purple;
+      outline-offset: 2px;
+    }
+
+    &:active {
+      outline: none;
+      color: $yellow-dark;
+      text-decoration-color: $yellow-dark;
+      opacity: 0.3;
+    }
+  }
+}
+
+.contacts-list {
+  justify-self: center;
+  grid-column: 2 / -2;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 0;
+  margin: 14px 0 0;
+  list-style: none;
+
+  a {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: $white;
+    opacity: 0.3;
+
+    &:hover {
+      background-color: $yellow-dark;
+      opacity: 1;
+    }
+
+    &:focus {
+      outline: 2px solid $purple;
+      outline-offset: 2px;
+      opacity: 1;
+    }
+
+    &:active {
+      outline: none;
+      opacity: 1;
+
+      span {
+        opacity: 0.3;
+      }
+    }
+  }
+}
+
+.telegram {
+  width: 14px;
+  height: 12px;
+  background-image: url(../img/icons/telegram.svg);
+  background-repeat: no-repeat;
+}
+
+.youtube {
+  width: 16px;
+  height: 11px;
+  background-image: url(../img/icons/youtube.svg);
+  background-repeat: no-repeat;
+}
+
+.twitter {
+  width: 15px;
+  height: 14px;
+  background-image: url(../img/icons/twitter.svg);
+  background-repeat: no-repeat;
+}
+
+.logo-academy-link {
+  margin-top: 15px;
+  justify-self: right;
+  display: block;
+  height: 33px;
+  width: 115px;
+  color: $yellow-dark;
+
+  &:hover {
+    color: $white;
+  }
+
+  &:focus {
+    outline: 2px solid $purple;
+    outline-offset: 2px;
+  }
+
+  &:active {
+    outline: none;
+    color: $white;
+    opacity: 0.3;
+  }
+}

@@ -13,6 +13,20 @@
   overflow: hidden;
 }
 
+// Flex
+.flex-container {
+  display: flex;
+}
+
+.flex-container-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
 // Grid
 .place-center {
   display: grid;
