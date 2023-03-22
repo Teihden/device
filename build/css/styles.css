@@ -95,11 +95,12 @@ main {
   opacity: 0.3;
 }
 
-.buttons-streak {
+.button-streak {
   display: block;
   border: none;
   background-color: transparent;
   position: relative;
+  z-index: 10;
   padding: 10px 10px 9px;
   font-family: Raleway;
   font-weight: 800;
@@ -111,7 +112,7 @@ main {
   color: #000000;
   text-align: center;
 }
-.buttons-streak::before {
+.button-streak::before {
   position: absolute;
   z-index: -10;
   top: 50%;
@@ -122,24 +123,27 @@ main {
   background-color: #ffe17f;
   transform: translateY(-50%);
 }
-.buttons-streak:hover {
+.button-streak:hover {
   background-color: #ffe17f;
 }
-.buttons-streak:focus {
+.button-streak:focus {
   outline: 2px solid #af4fff;
   outline-offset: 2px;
 }
-.buttons-streak:active {
+.button-streak:active {
   outline: none;
   background-color: #ffcc33;
 }
-.buttons-streak:disabled {
+.button-streak:active::before {
+  background-color: #ffcc33;
+}
+.button-streak:disabled {
   opacity: 0.3;
 }
-.buttons-streak:disabled:hover {
+.button-streak:disabled:hover {
   background-color: transparent;
 }
-.buttons-streak:disabled:active {
+.button-streak:disabled:active {
   outline: none;
   background-color: transparent;
 }
@@ -820,7 +824,7 @@ main {
   position: relative;
   z-index: 20;
 }
-.articles .buttons-streak {
+.articles .button-streak {
   max-width: 220px;
   margin-bottom: 50px;
 }
@@ -890,6 +894,7 @@ main {
 .categories a {
   display: block;
   width: 160px;
+  min-height: 252px;
   font-family: Raleway;
   font-weight: 800;
   font-size: 18px;
@@ -956,4 +961,99 @@ main {
 
 .monopods::before {
   background-position: center bottom;
+}
+
+.features {
+  padding-bottom: 72px;
+  background: linear-gradient(#f0f0f0, #f0f0f0) no-repeat left 102px;
+}
+
+.features-container {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 116px;
+  width: 1160px;
+  margin: 0 auto;
+}
+
+.tabs {
+  width: 287px;
+  padding: 64px 0 65px;
+  margin: 0;
+  border-right: 7px solid #000000;
+  list-style: none;
+}
+.tabs li:not(:last-child) {
+  margin-bottom: 35px;
+}
+.tabs button {
+  padding-inline: 0;
+}
+.tabs button span {
+  display: block;
+  width: 160px;
+  padding-inline: 10px;
+  background-color: transparent;
+}
+.tabs .active {
+  width: 100%;
+  color: #ffe17f;
+  background-color: #000000;
+}
+.tabs .active::before {
+  display: none;
+}
+
+.delivery {
+  width: 694px;
+  background-image: url(../img/features/delivery.svg);
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+.delivery p {
+  width: 452px;
+  margin: 0;
+}
+.delivery h3 {
+  margin: 0 0 34px;
+}
+
+.warranty {
+  width: 729px;
+  background-image: url(../img/features/warranty.svg);
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+.warranty p {
+  width: 480px;
+  margin: 0 0 10.5px;
+}
+.warranty h3 {
+  margin: 10.5px 0 34px;
+}
+
+.credit {
+  width: 729px;
+  background-image: url(../img/features/credit.svg);
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+.credit p {
+  width: 480px;
+  margin: 0 0 7px;
+}
+.credit h3 {
+  margin: 7px 0 34px;
+}
+
+.features-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+.features-list li {
+  font-size: 18px;
+  line-height: 30px;
 }

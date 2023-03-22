@@ -105,9 +105,10 @@ main {
 }
 
 // Buttons
-.buttons-streak {
+.button-streak {
   @include button-default;
   position: relative;
+  z-index: 10;
   padding: 10px 10px 9px;
   font-family: Raleway;
   font-weight: 800;
@@ -142,6 +143,10 @@ main {
   &:active {
     outline: none;
     background-color: $sunglow;
+
+    &::before {
+      background-color: $sunglow;
+    }
   }
 
   &:disabled {

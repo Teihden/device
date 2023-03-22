@@ -1,0 +1,107 @@
+.features {
+  padding-bottom: 72px;
+  background: linear-gradient($light, $light) no-repeat left 102px;
+}
+
+.features-container {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 116px;
+  width: 1160px;
+  margin: 0 auto;
+
+}
+
+.tabs {
+  width: 287px;
+  padding: 64px 0 65px;
+  margin: 0;
+  border-right: 7px solid $black;
+  list-style: none;
+
+  li:not(:last-child) {
+    margin-bottom: 35px;
+  }
+
+  button {
+    padding-inline: 0;
+
+    span {
+      display: block;
+      width: 160px;
+      padding-inline: 10px;
+      background-color: transparent;
+    }
+  }
+
+  .active {
+    width: 100%;
+    color: $yellow-light;
+    background-color: $black;
+
+    &::before {
+      display: none;
+    }
+  }
+}
+
+.delivery {
+  width: 694px;
+  background-image: url(../img/features/delivery.svg);
+  background-repeat: no-repeat;
+  background-position: right center;
+
+  p {
+    width: 452px;
+    margin: 0;
+  }
+
+  h3 {
+    margin: 0 0 34px;
+  }
+}
+
+.warranty {
+  width: 729px;
+  background-image: url(../img/features/warranty.svg);
+  background-repeat: no-repeat;
+  background-position: right center;
+
+  p {
+    width: 480px;
+    margin: 0 0 10.5px;
+  }
+
+  h3 {
+    margin: 10.5px 0 34px;
+  }
+}
+
+.credit {
+  width: 729px;
+  background-image: url(../img/features/credit.svg);
+  background-repeat: no-repeat;
+  background-position: right center;
+
+  p {
+    width: 480px;
+    margin: 0 0 7px;
+  }
+
+  h3 {
+    margin: 7px 0 34px;
+  }
+}
+
+.features-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+
+  li {
+    font-size: 18px;
+    line-height: 30px;
+  }
+}
