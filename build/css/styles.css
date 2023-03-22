@@ -963,9 +963,10 @@ main {
   background-position: center bottom;
 }
 
-.features {
+.features-list {
   padding-bottom: 72px;
   background: linear-gradient(#f0f0f0, #f0f0f0) no-repeat left 102px;
+  margin-bottom: 70px;
 }
 
 .features-container {
@@ -999,9 +1000,13 @@ main {
   width: 100%;
   color: #ffe17f;
   background-color: #000000;
+  transition: padding 0.2s ease-out 0.3s;
 }
 .tabs .active::before {
   display: none;
+}
+.tabs .active:hover {
+  padding-left: 35px;
 }
 
 .delivery {
@@ -1046,14 +1051,169 @@ main {
   margin: 7px 0 34px;
 }
 
-.features-list {
+.features-description {
   margin: 0;
   padding: 0;
   list-style: none;
   display: flex;
   align-items: center;
 }
-.features-list li {
+.features-description li {
   font-size: 18px;
   line-height: 30px;
+}
+
+.rare-goods {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 1160px;
+  height: 100px;
+  margin: 0 auto;
+  background-color: #f0f0f0;
+  margin-bottom: 70px;
+  font-family: Raleway;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #000000;
+  text-decoration: none;
+}
+.rare-goods::before {
+  content: "";
+  height: 100px;
+  width: 125px;
+  background-color: #ffe17f;
+  background-image: url(../img/icons/rare-goods.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.rare-goods .tooltip {
+  height: 40px;
+  width: 40px;
+  background-color: rgba(220, 220, 220, 0.5);
+  color: #000000;
+  border-radius: 50%;
+  margin: 0 43px 0 35px;
+}
+.rare-goods .tooltip svg {
+  opacity: 0.3;
+}
+.rare-goods p {
+  margin: 2px 0 0;
+}
+.rare-goods:hover::before {
+  background-color: #ffc700;
+}
+.rare-goods:hover .tooltip svg {
+  opacity: 1;
+}
+.rare-goods:focus {
+  outline: 2px solid #af4fff;
+  outline-offset: 2px;
+}
+.rare-goods:active {
+  outline: none;
+  opacity: 0.3;
+}
+
+.info {
+  display: flex;
+  width: 1160px;
+  margin: 0 auto 70px;
+}
+.info section::before {
+  display: block;
+  content: "";
+  width: 84px;
+  height: 7px;
+  background-color: #000000;
+}
+.info h3 {
+  margin: 41px 0 48px;
+}
+
+.text {
+  margin: 0 0 30px;
+}
+
+.shippers {
+  margin: 0 0 30px;
+  padding-left: 37.5px;
+  list-style: none;
+}
+.shippers li {
+  position: relative;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  letter-spacing: -0.02em;
+  color: #000000;
+}
+.shippers li::before {
+  position: absolute;
+  left: -34px;
+  top: 50%;
+  content: "";
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  background-color: #ffc700;
+  transform: translateY(-50%);
+}
+.shippers li:not(:last-child) {
+  margin-bottom: 19px;
+}
+
+.about {
+  margin-right: 147px;
+}
+.about .button-streak {
+  min-width: 270px;
+}
+
+.contacts {
+  width: 532px;
+  flex-shrink: 0;
+}
+.contacts h4 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  margin: 29px 0 15px;
+}
+.contacts a {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  color: #444444;
+  font-style: normal;
+}
+.contacts a:hover {
+  opacity: 0.6;
+}
+.contacts a:focus {
+  outline: 2px solid #af4fff;
+  outline-offset: 2px;
+}
+.contacts a:active {
+  outline: none;
+  opacity: 0.3;
+}
+.contacts .button-streak {
+  min-width: 259px;
+}
+
+.location {
+  font-style: normal;
+  margin: 0;
+}
+
+.working-time {
+  padding: 0;
+  margin: 0 0 30px;
+  list-style: none;
 }

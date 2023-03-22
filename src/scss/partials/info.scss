@@ -1,0 +1,110 @@
+.info {
+  display: flex;
+  width: 1160px;
+  margin: 0 auto 70px;
+
+  section {
+    &::before {
+      display: block;
+      content: '';
+      width: 84px;
+      height: 7px;
+      background-color: $black;
+    }
+  }
+
+  h3 {
+    margin: 41px 0 48px;
+  }
+}
+
+.text {
+  margin: 0 0 30px;
+}
+
+.shippers {
+  margin: 0 0 30px;
+  padding-left: 37.5px;
+  list-style: none;
+
+  li {
+    position: relative;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 20px;
+    letter-spacing: -0.02em;
+    color: $black;
+
+    &::before {
+      position: absolute;
+      left: -34px;
+      top: 50%;
+      content: '';
+      height: 8px;
+      width: 8px;
+      border-radius: 50%;
+      background-color: $yellow-dark;
+      transform: translateY(-50%);
+    }
+  }
+
+  li:not(:last-child) {
+    margin-bottom: 19px;
+  }
+}
+
+.about {
+  margin-right: 147px;
+
+  .button-streak {
+    min-width: 270px;
+  }
+}
+
+.contacts {
+  width: 532px;
+  flex-shrink: 0;
+
+  h4 {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    margin: 29px 0 15px;
+  }
+
+  a {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    color: $dark;
+    font-style: normal;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:focus {
+      @include focus-default;
+    }
+
+    &:active {
+      outline: none;
+      opacity: 0.3;
+    }
+  }
+
+  .button-streak {
+    min-width: 259px;
+  }
+}
+
+.location {
+  font-style: normal;
+  margin: 0;
+}
+
+.working-time {
+  padding: 0;
+  margin: 0 0 30px;
+  list-style: none;
+}
