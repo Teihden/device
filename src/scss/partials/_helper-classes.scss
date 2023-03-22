@@ -13,6 +13,10 @@
   overflow: hidden;
 }
 
+.closed {
+  display: none;
+}
+
 // Flex
 .flex-container {
   display: flex;

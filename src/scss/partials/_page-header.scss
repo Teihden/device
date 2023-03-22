@@ -1,9 +1,8 @@
 .page-header {
-  position: relative;
   width: 1160px;
-  padding: 46px 60px 19px;
-  margin: 40px auto 0;
-  background-color: $yellow;
+  padding: 20px 60px 19px;
+  margin: 0 auto;
+  background: linear-gradient($yellow, $yellow) no-repeat left 40px;
 
   form {
     display: flex;
@@ -23,9 +22,6 @@
 }
 
 .header-logo-link {
-  position: absolute;
-  top: -20px;
-  left: 60px;
   width: 145px;
   height: 36px;
   margin-bottom: 30px;
@@ -59,8 +55,7 @@
   }
 
   &:focus {
-    outline: 2px solid $purple;
-    outline-offset: 2px;
+    @include focus-default;
   }
 
   &:disabled {
@@ -143,10 +138,6 @@
   opacity: 0.3;
 }
 
-.logout-closed {
-  display: none;
-}
-
 .compare {
   margin-left: auto;
 }
@@ -181,10 +172,27 @@
     line-height: 17px;
   }
 
-  &:hover+ {
+  &:hover + {
     .shopping-cart {
       display: block;
       opacity: 1;
+    }
+  }
+
+  &:hover::after {
+    position: absolute;
+    content: '';
+    top: 30px;
+    left: -30px;
+    width: 180px;
+    height: 6px;
+    background-color: transparent;
+
+    &:hover + {
+      .shopping-cart {
+        display: block;
+        opacity: 1;
+      }
     }
   }
 }
@@ -192,9 +200,9 @@
 .shopping-cart {
   display: none;
   position: absolute;
-  z-index: 3;
+  z-index: 50;
   top: calc(100% + 6px);
-  left: -124px;
+  left: -125px;
   width: 320px;
   background-color: $black;
   opacity: 0;
@@ -226,6 +234,10 @@
     background-repeat: no-repeat;
     background-position: center;
   }
+}
+
+.cart-item:not(:first-child) {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .cart-item-link {
@@ -262,7 +274,7 @@
 }
 
 .cart-link-more {
-  padding: 14px;
+  padding: 14.5px;
   margin: 20px;
   text-decoration: none;
   color: $black;
@@ -273,8 +285,7 @@
   }
 
   &:focus {
-    outline: 2px solid $purple;
-    outline-offset: 2px;
+    @include focus-default;
   }
 
   &:active {
@@ -310,9 +321,9 @@
   gap: 20px 45px;
 
   li {
-    a {
+    .heading-2 {
       position: relative;
-      z-index: 2;
+      z-index: 40;
       color: $black;
     }
   }
@@ -353,8 +364,7 @@
   }
 
   &:focus {
-    outline: 2px solid $purple;
-    outline-offset: 2px;
+    @include focus-default;
   }
 
   &:active {
@@ -392,10 +402,9 @@
   position: absolute;
   top: 33px;
   left: -60px;
-  z-index: 1;
+  z-index: 30;
   width: 1160px;
-  padding: 33px 60px 27px;
-  column-gap: 30px;
+  padding: 32px 60px 56px;
   background-color: $yellow;
 
   a {
@@ -411,6 +420,11 @@
   li:not(:last-child) {
     margin-bottom: 18px;
   }
+}
+
+.catalog-sublist:first-child {
+  min-width: 222px;
+  margin-right: 30px;
 }
 
 .navigation-link-active {

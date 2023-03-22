@@ -1,0 +1,10 @@
+@mixin button-default {
+  display: block;
+  border: none;
+  background-color: transparent;
+}
+
+@mixin focus-default {
+  outline: 2px solid $purple;
+  outline-offset: 2px;
+}

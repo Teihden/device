@@ -1,0 +1,56 @@
+section.hero
+  h2.visually-hidden Превью товаров
+  .slider
+    ol.products
+      li#product-1
+        img(src="img/hero/product-1.svg" width="560" height="560" alt="Квадрокоптер.")
+      li.closed#product-2
+        img(src="img/hero/product-2.svg" width="560" height="560" alt="Фитнес-браслеты" aria-hidden="true")
+      li.closed#product-3
+        img(src="img/hero/product-3.svg" width="560" height="560" alt="Палка для селфи." aria-hidden="true")
+    button.link.button-previous(type="button" aria-label="Следующее фото")
+    button.link.button-next(type="button" aria-label="Предыдущее фото")
+  ol.articles
+    li#article-1(data-count="01")
+      article
+        p.heading-1 Порхает как бабочка, жалит как пчела!
+        p.article-text Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.
+        a.buttons-streak(href="#no_scroll") Подробнее
+        dl
+          .group
+            dt 800 м
+            dd Дальность полета
+          .group
+            dt 50 м
+            dd Радиус поражения
+    li.closed#article-2(data-count="02")
+      article
+        p.heading-1 Худеем правильно!
+        p.article-text Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.
+        a.buttons-streak(href="#no_scroll") Подробнее
+        dl
+          .group
+            dt 48 часов
+            dd Без подзарядки
+    li.closed.article-3#article-3(data-count="03")
+      article
+        p.heading-1 Делай селфи, как Бен Стиллер!
+        p.article-text Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 кг.
+        a.buttons-streak(href="#no_scroll") Подробнее
+        dl
+          .group
+            dt 8,5 м
+            dd Длина палки
+          .group
+            dt 5 кг
+            dd Вес палки
+          .group
+            dt Карбон
+            dd Материал
+  ol.buttons
+    li
+      button.link.active#button-1(type="button" aria-label="Фото 1.")
+    li
+      button.link#button-2(type="button" aria-label="Фото 2.")
+    li
+      button.link#button-3(type="button" aria-label="Фото 3.")

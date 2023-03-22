@@ -65,8 +65,7 @@
     }
 
     &:focus {
-      outline: 2px solid $purple;
-      outline-offset: 2px;
+      @include focus-default;
     }
 
     &:active {
@@ -101,8 +100,7 @@
     }
 
     &:focus {
-      outline: 2px solid $purple;
-      outline-offset: 2px;
+      @include focus-default;
     }
 
     &:active {
@@ -137,8 +135,7 @@
     }
 
     &:focus {
-      outline: 2px solid $purple;
-      outline-offset: 2px;
+      @include focus-default;
       opacity: 1;
     }
 
@@ -187,8 +184,7 @@
   }
 
   &:focus {
-    outline: 2px solid $purple;
-    outline-offset: 2px;
+    @include focus-default;
   }
 
   &:active {
