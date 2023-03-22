@@ -754,7 +754,7 @@ main {
   grid-template-columns: repeat(2, 560px);
   column-gap: 40px;
   width: 1160px;
-  margin: -35px auto 0;
+  margin: -35px auto 70px;
   background: linear-gradient(#ffe17f, #ffe17f) no-repeat left -410px;
 }
 .hero .heading-1 {
@@ -867,9 +867,93 @@ main {
   background-color: transparent;
   height: 12px;
   width: 12px;
+  padding: 0;
   border-radius: 50%;
   border: 2px solid #000000;
 }
 .buttons .active {
   background-color: #000000;
+}
+
+.categories {
+  width: 1160px;
+  margin: 0 auto 70px;
+}
+.categories ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.categories a {
+  display: block;
+  width: 160px;
+  font-family: Raleway;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: -0.02em;
+  color: #000000;
+  text-decoration: none;
+}
+.categories a::before {
+  content: "";
+  display: block;
+  height: 160px;
+  width: 160px;
+  margin-bottom: 32px;
+  background-color: #ffe17f;
+}
+.categories a:hover::before {
+  background-color: #ffc700;
+}
+.categories a:focus {
+  outline: 2px solid #af4fff;
+  outline-offset: 2px;
+}
+.categories a:active {
+  outline: none;
+  opacity: 0.3;
+}
+
+.vr-glasses::before {
+  background-image: url(../img/categories/vr-glasses.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.monopods::before {
+  background-image: url(../img/categories/monopods.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.cameras::before {
+  background-image: url(../img/categories/cameras.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.bracelets::before {
+  background-image: url(../img/categories/bracelets.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.watches::before {
+  background-image: url(../img/categories/watches.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.drones::before {
+  background-image: url(../img/categories/drones.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.monopods::before {
+  background-position: center bottom;
 }

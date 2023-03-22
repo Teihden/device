@@ -1,0 +1,57 @@
+.categories {
+  width: 1160px;
+  margin: 0 auto 70px;
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  a {
+    display: block;
+    width: 160px;
+    font-family: Raleway;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: -0.02em;
+    color: $black ;
+    text-decoration: none;
+
+    &::before {
+      content: '';
+      display: block;
+      height: 160px;
+      width: 160px;
+      margin-bottom: 32px;
+      background-color: $yellow-light;
+    }
+
+    &:hover::before {
+      background-color: $yellow-dark;
+    }
+
+    &:focus {
+      @include focus-default;
+    }
+
+    &:active {
+      outline: none;
+      opacity: 0.3;
+    }
+  }
+}
+
+@each $category in $categories {
+  @include bg-image($category);
+}
+
+.monopods {
+  &::before {
+    background-position: center bottom;
+  }
+}

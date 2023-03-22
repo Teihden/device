@@ -8,3 +8,13 @@
   outline: 2px solid $purple;
   outline-offset: 2px;
 }
+
+@mixin bg-image($img) {
+  .#{$img} {
+    &::before {
+    background-image: url(../img/categories/#{$img}.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    }
+  }
+}
