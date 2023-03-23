@@ -148,6 +148,39 @@ main {
   background-color: transparent;
 }
 
+.button-transparent {
+  color: #000000;
+  background-color: transparent;
+}
+.button-transparent:hover {
+  background: #000000;
+  color: #ffffff;
+  border-color: transparent;
+}
+.button-transparent:focus {
+  outline: 2px solid #af4fff;
+  outline-offset: 2px;
+}
+.button-transparent:active {
+  outline: none;
+  color: #ffffff;
+  background: #000000;
+  border-color: transparent;
+}
+.button-transparent:active span {
+  opacity: 0.3;
+}
+.button-transparent:disabled {
+  opacity: 0.3;
+}
+.button-transparent:disabled:hover {
+  color: #000000;
+  background-color: transparent;
+}
+.button-transparent:disabled:active span {
+  opacity: 1;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -234,6 +267,14 @@ main {
   color: #000000;
   opacity: 0.3;
 }
+.search-input::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  height: 10px;
+  width: 10px;
+  margin-left: 14px;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 10 10' fill='%363636'><path d='M10 .9 9.1 0 5 4.1.9 0 0 .9 4.1 5 0 9.1l.9.9L5 5.9 9.1 10l.9-.9L5.9 5 10 .9Z'/></svg>");
+  cursor: pointer;
+}
 .search-input:focus {
   outline: 2px solid #af4fff;
   outline-offset: 2px;
@@ -250,32 +291,6 @@ main {
   font-family: Rubik;
   font-size: 16px;
   line-height: 20px;
-  color: #000000;
-  background-color: transparent;
-}
-.search-button:hover {
-  background: #000000;
-  color: #ffffff;
-}
-.search-button:focus {
-  outline: 2px solid #af4fff;
-  outline-offset: 2px;
-}
-.search-button:active {
-  outline: none;
-}
-.search-button:active span {
-  opacity: 0.3;
-}
-.search-button:disabled {
-  opacity: 0.3;
-}
-.search-button:disabled:hover {
-  color: #000000;
-  background-color: transparent;
-}
-.search-button:disabled:active span {
-  opacity: 1;
 }
 
 .navigation-user {
@@ -339,11 +354,11 @@ main {
   font-size: 14px;
   line-height: 17px;
 }
-.cart-link:hover + .shopping-cart {
+.cart-link:hover + .shopping-cart, .cart-link:focus + .shopping-cart {
   display: block;
   opacity: 1;
 }
-.cart-link:hover::after {
+.cart-link:hover::after, .cart-link:focus::after {
   position: absolute;
   content: "";
   top: 30px;
@@ -352,7 +367,7 @@ main {
   height: 6px;
   background-color: transparent;
 }
-.cart-link:hover::after:hover + .shopping-cart {
+.cart-link:hover::after:hover + .shopping-cart, .cart-link:focus::after:hover + .shopping-cart {
   display: block;
   opacity: 1;
 }
@@ -389,7 +404,7 @@ main {
   height: 10px;
   border: none;
   background-color: transparent;
-  background-image: url(../img/icons/button-close.svg);
+  background-image: url(../img/icons/button-closed.svg);
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -884,8 +899,8 @@ main {
   margin: 0 auto 70px;
 }
 .categories ul {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(6, 160px);
   gap: 40px;
   padding: 0;
   margin: 0;
@@ -1216,4 +1231,87 @@ main {
   padding: 0;
   margin: 0 0 30px;
   list-style: none;
+}
+
+.newsletteter {
+  background-color: #f0f0f0;
+}
+
+.newsletteter-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 1160px;
+  padding: 64px 0 56px;
+  margin: 0 auto;
+}
+
+.newsletteter-heading {
+  max-width: 348px;
+  margin: 0 252px 144px 7px;
+}
+
+.newsletteter-text {
+  width: 552px;
+  margin: 10px 0 0;
+}
+
+.email-form {
+  display: flex;
+  width: 810px;
+}
+
+.email-input {
+  flex-grow: 1;
+  padding: 11px 17px 11px;
+  border: none;
+  border-bottom: 3px solid #c4c4c4;
+  font-family: Rubik;
+  font-size: 18px;
+  line-height: 30px;
+  color: #444444;
+  background-color: transparent;
+}
+.email-input::placeholder {
+  font-family: Rubik;
+  font-size: 18px;
+  line-height: 30px;
+  color: #444444;
+  opacity: 0.5;
+}
+.email-input:focus {
+  background-color: #dcdcdc;
+}
+.email-input:disabled {
+  opacity: 0.3;
+}
+.email-input:not(:placeholder-shown):invalid {
+  border-color: #ff3d3d;
+}
+
+.email-button {
+  padding: 15px;
+  min-width: 253px;
+  font-family: "Raleway";
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  border: 3px solid #c4c4c4;
+}
+
+.no-charge {
+  display: flex;
+  align-items: center;
+  align-self: center;
+}
+.no-charge::before {
+  content: "";
+  display: block;
+  height: 16px;
+  width: 16px;
+  margin-right: 17px;
+  background-image: url(../img/icons/tick.svg);
+  background-repeat: no-repeat;
 }

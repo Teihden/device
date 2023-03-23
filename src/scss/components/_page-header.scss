@@ -54,6 +54,15 @@
     opacity: 0.3;
   }
 
+  &::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    height: 10px;
+    width: 10px;
+    margin-left: 14px;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 10 10' fill='%363636'><path d='M10 .9 9.1 0 5 4.1.9 0 0 .9 4.1 5 0 9.1l.9.9L5 5.9 9.1 10l.9-.9L5.9 5 10 .9Z'/></svg>");
+    cursor: pointer;
+  }
+
   &:focus {
     @include focus-default;
   }
@@ -71,41 +80,6 @@
   font-family: Rubik;
   font-size: 16px;
   line-height: 20px;
-  color: $black;
-  background-color: transparent;
-
-  &:hover {
-    background: $black;
-    color: $white;
-  }
-
-  &:focus {
-    outline: 2px solid $purple;
-    outline-offset: 2px;
-  }
-
-  &:active {
-    outline: none;
-
-    span {
-      opacity: 0.3;
-    }
-  }
-
-  &:disabled {
-    opacity: 0.3;
-
-    &:hover {
-      color: $black;
-      background-color: transparent;
-    }
-
-    &:active {
-      span {
-        opacity: 1;
-      }
-    }
-  }
 }
 
 .navigation-user {
@@ -172,14 +146,16 @@
     line-height: 17px;
   }
 
-  &:hover + {
+  &:hover+,
+  &:focus+ {
     .shopping-cart {
       display: block;
       opacity: 1;
     }
   }
 
-  &:hover::after {
+  &:hover::after,
+  &:focus::after {
     position: absolute;
     content: '';
     top: 30px;
@@ -188,7 +164,7 @@
     height: 6px;
     background-color: transparent;
 
-    &:hover + {
+    &:hover+ {
       .shopping-cart {
         display: block;
         opacity: 1;
@@ -230,7 +206,7 @@
     height: 10px;
     border: none;
     background-color: transparent;
-    background-image: url(../img/icons/button-close.svg);
+    background-image: url(../img/icons/button-closed.svg);
     background-repeat: no-repeat;
     background-position: center;
   }
@@ -391,7 +367,7 @@
 }
 
 // Временно, потом убрать
-.catalog-heading:hover + {
+.catalog-heading:hover+ {
   .catalog-container {
     display: flex;
   }

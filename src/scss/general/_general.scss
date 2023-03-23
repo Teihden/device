@@ -162,3 +162,45 @@ main {
     }
   }
 }
+
+.button-transparent {
+  color: $black;
+  background-color: transparent;
+
+  &:hover {
+    background: $black;
+    color: $white;
+    border-color: transparent;
+  }
+
+  &:focus {
+    outline: 2px solid $purple;
+    outline-offset: 2px;
+  }
+
+  &:active {
+    outline: none;
+    color: $white;
+    background: $black;
+    border-color: transparent;
+
+    span {
+      opacity: 0.3;
+    }
+  }
+
+  &:disabled {
+    opacity: 0.3;
+
+    &:hover {
+      color: $black;
+      background-color: transparent;
+    }
+
+    &:active {
+      span {
+        opacity: 1;
+      }
+    }
+  }
+}

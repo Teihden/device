@@ -5,20 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width">
     <title>Device</title>
-    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="img/favicon-32x32.png" sizes="32x32" type="image/png">
     <link rel="stylesheet" href="css/styles.css">
   </head>
   <body>
+    <h1 class="visually-hidden">Магазин Device</h1>
     <header class="page-header">
-      <h1 class="visually-hidden">Магазин Device</h1>
+      <h2 class="visually-hidden">Навигация по сайту</h2>
       <nav><a class="link header-logo-link" href="#no_scroll"><img src="img/logos/logo-header.svg" width="145" height="36" alt="Логотип магазина Device."></a>
         <div class="flex-container">
           <form action="https://echo.htmlacademy.ru" method="get">
             <label class="search-label">
               <input class="search-input" id="search" type="search" name="search-page" placeholder="Поиск по сайту" required><span class="visually-hidden">Поиск по сайту</span>
             </label>
-            <button class="search-button place-center" type="submit"><span>Найти</span></button>
+            <button class="search-button button-transparent place-center" type="submit"><span>Найти</span></button>
           </form>
           <ul class="navigation-user">
             <li class="login"><a class="link user-link login-link" href="#no_scroll">Войти</a></li>
@@ -217,6 +218,17 @@
           </ul>
           <button class="button-streak">Напишите нам</button>
         </section>
+      </section>
+      <section class="newsletteter">
+        <div class="newsletteter-container">
+          <h2 class="heading-1 newsletteter-heading">Подпишитесь на рассылку</h2>
+          <p class="newsletteter-text">Еженедельный дайджест с обзорами новинок,<br> длительными тест-драйвами, распаковками, а также акции, спецпредложения и вот это вот всё.</p>
+          <form class="email-form" action="https://echo.htmlacademy.ru" method="post">
+            <label class="email-label"><span class="visually-hidden">Ваш e-mail</span></label>
+            <input class="email-input" id="email" type="email" name="email" placeholder="Ваш e-mail" required>
+            <button class="email-button button-transparent place-center" type="submit"><span>Подписаться</span></button>
+          </form><span class="no-charge">Это бесплатно</span>
+        </div>
       </section>
     </main>
     <footer class="page-footer">
