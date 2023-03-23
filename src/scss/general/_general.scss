@@ -81,12 +81,11 @@ main {
   font-weight: 700;
   font-size: 18px;
   line-height: 20px;
-  letter-spacing: -0.02em;
   color: $black;
 }
 
 // Links
-.link {
+.states-default {
   display: block;
   text-decoration: none;
 
@@ -101,6 +100,19 @@ main {
   &:active {
     outline: none;
     opacity: 0.3;
+  }
+
+  &:disabled {
+    opacity: 0.1;
+
+    &:hover {
+      outline: none;
+      opacity: 0.1;
+    }
+
+    &:focus {
+      outline: none;
+    }
   }
 }
 
@@ -119,6 +131,8 @@ main {
   text-decoration: none;
   color: $black;
   text-align: center;
+  user-select: none;
+  cursor: pointer;
 
   &::before {
     position: absolute;
@@ -151,6 +165,7 @@ main {
 
   &:disabled {
     opacity: 0.3;
+    cursor: default;
 
     &:hover {
       background-color: transparent;
@@ -166,6 +181,8 @@ main {
 .button-transparent {
   color: $black;
   background-color: transparent;
+  user-select: none;
+  cursor: pointer;
 
   &:hover {
     background: $black;
@@ -191,6 +208,7 @@ main {
 
   &:disabled {
     opacity: 0.3;
+    cursor: default;
 
     &:hover {
       color: $black;

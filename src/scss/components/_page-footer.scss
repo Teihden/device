@@ -126,22 +126,18 @@
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color: $white;
-    opacity: 0.3;
+    background-color: rgba(255, 255, 255, 0.3);;
 
     &:hover {
       background-color: $yellow-dark;
-      opacity: 1;
     }
 
     &:focus {
       @include focus-default;
-      opacity: 1;
     }
 
     &:active {
       outline: none;
-      opacity: 1;
 
       span {
         opacity: 0.3;

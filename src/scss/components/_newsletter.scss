@@ -31,14 +31,14 @@
   padding: 11px 17px 11px;
   border: none;
   border-bottom: 3px solid $weathered-stone;
-  font-family: Rubik;
+  font-family: inherit;
   font-size: 18px;
   line-height: 30px;
   color: $dark;
   background-color: transparent;
 
   &::placeholder {
-    font-family: Rubik;
+    font-family: inherit;
     font-size: 18px;
     line-height: 30px;
     color: $dark;
@@ -61,13 +61,14 @@
 .email-button {
   padding: 15px;
   min-width: 253px;
-  font-family: 'Raleway';
+  font-family: Raleway;
   font-weight: 800;
   font-size: 18px;
   line-height: 21px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   border: 3px solid $weathered-stone;
+  user-select: none;
 }
 
 .no-charge {
@@ -81,7 +82,7 @@
     height: 16px;
     width: 16px;
     margin-right: 17px;
-    background-image: url(../img/icons/tick.svg);
+    background-image: url(../img/icons/tick-success.svg);
     background-repeat: no-repeat;
   }
 }

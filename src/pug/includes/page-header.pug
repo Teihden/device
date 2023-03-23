@@ -1,35 +1,45 @@
 header.page-header
   h2.visually-hidden Навигация по сайту
   nav
-    a.link.header-logo-link(href="#no_scroll")
+    a.states-default.header-logo-link(href="#no_scroll")
       img(src="img/logos/logo-header.svg" width="145" height="36" alt="Логотип магазина Device.")
-    .flex-container
+    .header-navigation-site
       form(action="https://echo.htmlacademy.ru" method="get")
         label.search-label
-          input.search-input#search(type="search" name="search-page" placeholder="Поиск по сайту" required)
+          if page === "index"
+            input.search-input#search(type="search" name="search-page" placeholder="Поиск по сайту" required)
+          if page === "monopods"
+            input.search-input#search(type="search" name="search-page" placeholder="Поиск по сайту" value="Текст поиска" required)
           span.visually-hidden Поиск по сайту
         button.search-button.button-transparent.place-center(type="submit") #[span Найти]
-      ul.navigation-user
+      ul.header-navigation-user
         li.login
-          a.link.user-link.login-link(href="#no_scroll") Войти
-        li
-          a.link.user-link.logout-link.closed(href="#no_scroll") Выйти
+          if page === "index"
+            a.states-default.user-link.login-link(href="#no_scroll") Войти
+          if page === "monopods"
+            a.states-default.user-link.login-link(href="#no_scroll") Коля Петухов
+        if page === "index"
+          li.closed
+            a.states-default.user-link.logout-link(href="#no_scroll") Выйти
+        if page === "monopods"
+          li
+            a.states-default.user-link.logout-link(href="#no_scroll") Выйти
         li.compare
-          a.link.user-link.compare-link(href="#no_scroll") Сравнить
+          a.states-default.user-link.compare-link(href="#no_scroll") Сравнить
         li.cart
-          a.link.user-link.cart-link(href="#no_scroll") #[span.place-center 2] Корзина
+          a.states-default.user-link.cart-link(href="#no_scroll") #[span.place-center 2] Корзина
           .shopping-cart
             ul
               li.cart-item
-                a.link.cart-item-link
+                a.states-default.cart-item-link
                   img(src="img/shopping-cart/product-1.jpg" width="39" height="43" alt="Любительская селфи-палка.")
                   p Любительская селфи-палка
-                button.link(type="button" aria-label="Закрыть.")
+                button.states-default(type="button" aria-label="Закрыть.")
               li.cart-item
-                a.link.cart-item-link
+                a.states-default.cart-item-link
                   img(src="img/shopping-cart/product-2.jpg" width="39" height="43" alt="Профессиональная селфи-палка.")
                   p Профессиональная селфи-палка
-                button.link(type="button" aria-label="Закрыть.")
+                button.states-default(type="button" aria-label="Закрыть.")
             .summary
               p
                 span Товаров:
@@ -44,22 +54,25 @@ header.page-header
         .catalog-container
           ul.catalog-sublist
             li
-              a.link(href="#no_scroll") Виртуальная реальность
+              a.states-default(href="#no_scroll") Виртуальная реальность
             li
-              a.link(href="#no_scroll") Моноподы для cелфи
+              if page === "monopods"
+                a.states-default.catalog-link-active(href="catalog-monopods.html") Моноподы для cелфи
+              else
+                a.states-default(href="catalog-monopods.html") Моноподы для cелфи
             li
-              a.link(href="#no_scroll") Экшн-камеры
+              a.states-default(href="#no_scroll") Экшн-камеры
           ul.catalog-sublist
             li
-              a.link(href="#no_scroll") Фитнес-браслеты
+              a.states-default(href="#no_scroll") Фитнес-браслеты
             li
-              a.link(href="#no_scroll") Умные часы
+              a.states-default(href="#no_scroll") Умные часы
           ul.catalog-sublist
             li
-              a.link(href="#no_scroll") Квадрокоптеры
+              a.states-default(href="#no_scroll") Квадрокоптеры
       li.heading-2
-        a.heading-2.link.list-item(href="#no_scroll") Доставка
+        a.heading-2.states-default.list-item(href="#no_scroll") Доставка
       li.heading-2
-        a.heading-2.link.list-item(href="#no_scroll") Гарантия
+        a.heading-2.states-default.list-item(href="#no_scroll") Гарантия
       li.heading-2
-        a.heading-2.link.list-item(href="#no_scroll") Контакты
+        a.heading-2.states-default.list-item(href="#no_scroll") Контакты

@@ -13,28 +13,29 @@
     <h1 class="visually-hidden">Магазин Device</h1>
     <header class="page-header">
       <h2 class="visually-hidden">Навигация по сайту</h2>
-      <nav><a class="link header-logo-link" href="#no_scroll"><img src="img/logos/logo-header.svg" width="145" height="36" alt="Логотип магазина Device."></a>
-        <div class="flex-container">
+      <nav><a class="states-default header-logo-link" href="#no_scroll"><img src="img/logos/logo-header.svg" width="145" height="36" alt="Логотип магазина Device."></a>
+        <div class="header-navigation-site">
           <form action="https://echo.htmlacademy.ru" method="get">
             <label class="search-label">
               <input class="search-input" id="search" type="search" name="search-page" placeholder="Поиск по сайту" required><span class="visually-hidden">Поиск по сайту</span>
             </label>
             <button class="search-button button-transparent place-center" type="submit"><span>Найти</span></button>
           </form>
-          <ul class="navigation-user">
-            <li class="login"><a class="link user-link login-link" href="#no_scroll">Войти</a></li>
-            <li><a class="link user-link logout-link closed" href="#no_scroll">Выйти</a></li>
-            <li class="compare"><a class="link user-link compare-link" href="#no_scroll">Сравнить</a></li>
-            <li class="cart"><a class="link user-link cart-link" href="#no_scroll"><span class="place-center">2</span> Корзина</a>
+          <ul class="header-navigation-user">
+            <li class="login"><a class="states-default user-link login-link" href="#no_scroll">Войти</a>
+            </li>
+            <li class="closed"><a class="states-default user-link logout-link" href="#no_scroll">Выйти</a></li>
+            <li class="compare"><a class="states-default user-link compare-link" href="#no_scroll">Сравнить</a></li>
+            <li class="cart"><a class="states-default user-link cart-link" href="#no_scroll"><span class="place-center">2</span> Корзина</a>
               <div class="shopping-cart">
                 <ul>
-                  <li class="cart-item"><a class="link cart-item-link"><img src="img/shopping-cart/product-1.jpg" width="39" height="43" alt="Любительская селфи-палка.">
+                  <li class="cart-item"><a class="states-default cart-item-link"><img src="img/shopping-cart/product-1.jpg" width="39" height="43" alt="Любительская селфи-палка.">
                       <p>Любительская селфи-палка</p></a>
-                    <button class="link" type="button" aria-label="Закрыть."></button>
+                    <button class="states-default" type="button" aria-label="Закрыть."></button>
                   </li>
-                  <li class="cart-item"><a class="link cart-item-link"><img src="img/shopping-cart/product-2.jpg" width="39" height="43" alt="Профессиональная селфи-палка.">
+                  <li class="cart-item"><a class="states-default cart-item-link"><img src="img/shopping-cart/product-2.jpg" width="39" height="43" alt="Профессиональная селфи-палка.">
                       <p>Профессиональная селфи-палка</p></a>
-                    <button class="link" type="button" aria-label="Закрыть."></button>
+                    <button class="states-default" type="button" aria-label="Закрыть."></button>
                   </li>
                 </ul>
                 <div class="summary">
@@ -53,22 +54,23 @@
           <li class="catalog-list"><a class="heading-2 catalog-heading catalog-heading-closed" href="#no_scroll">Каталог товаров</a>
             <div class="catalog-container">
               <ul class="catalog-sublist">
-                <li><a class="link" href="#no_scroll">Виртуальная реальность</a></li>
-                <li><a class="link" href="#no_scroll">Моноподы для cелфи</a></li>
-                <li><a class="link" href="#no_scroll">Экшн-камеры</a></li>
+                <li><a class="states-default" href="#no_scroll">Виртуальная реальность</a></li>
+                <li><a class="states-default" href="catalog-monopods.html">Моноподы для cелфи</a>
+                </li>
+                <li><a class="states-default" href="#no_scroll">Экшн-камеры</a></li>
               </ul>
               <ul class="catalog-sublist">
-                <li><a class="link" href="#no_scroll">Фитнес-браслеты</a></li>
-                <li><a class="link" href="#no_scroll">Умные часы</a></li>
+                <li><a class="states-default" href="#no_scroll">Фитнес-браслеты</a></li>
+                <li><a class="states-default" href="#no_scroll">Умные часы</a></li>
               </ul>
               <ul class="catalog-sublist">
-                <li><a class="link" href="#no_scroll">Квадрокоптеры</a></li>
+                <li><a class="states-default" href="#no_scroll">Квадрокоптеры</a></li>
               </ul>
             </div>
           </li>
-          <li class="heading-2"><a class="heading-2 link list-item" href="#no_scroll">Доставка</a></li>
-          <li class="heading-2"><a class="heading-2 link list-item" href="#no_scroll">Гарантия</a></li>
-          <li class="heading-2"><a class="heading-2 link list-item" href="#no_scroll">Контакты</a></li>
+          <li class="heading-2"><a class="heading-2 states-default list-item" href="#no_scroll">Доставка</a></li>
+          <li class="heading-2"><a class="heading-2 states-default list-item" href="#no_scroll">Гарантия</a></li>
+          <li class="heading-2"><a class="heading-2 states-default list-item" href="#no_scroll">Контакты</a></li>
         </ul>
       </nav>
     </header>
@@ -81,8 +83,8 @@
             <li class="closed" id="product-2"><img src="img/hero/product-2.svg" width="560" height="560" alt="Фитнес-браслеты" aria-hidden="true"></li>
             <li class="closed" id="product-3"><img src="img/hero/product-3.svg" width="560" height="560" alt="Палка для селфи." aria-hidden="true"></li>
           </ol>
-          <button class="link button-previous" type="button" aria-label="Следующее фото"></button>
-          <button class="link button-next" type="button" aria-label="Предыдущее фото"></button>
+          <button class="states-default button-previous" type="button" aria-label="Следующее фото"></button>
+          <button class="states-default button-next" type="button" aria-label="Предыдущее фото"></button>
         </div>
         <ol class="articles">
           <li id="article-1" data-count="01">
@@ -136,13 +138,13 @@
         </ol>
         <ol class="buttons">
           <li>
-            <button class="link active" id="button-1" type="button" aria-label="Фото 1."></button>
+            <button class="states-default active" id="button-1" type="button" aria-label="Фото 1."></button>
           </li>
           <li>
-            <button class="link" id="button-2" type="button" aria-label="Фото 2."></button>
+            <button class="states-default" id="button-2" type="button" aria-label="Фото 2."></button>
           </li>
           <li>
-            <button class="link" id="button-3" type="button" aria-label="Фото 3."></button>
+            <button class="states-default" id="button-3" type="button" aria-label="Фото 3."></button>
           </li>
         </ol>
       </section>
@@ -150,7 +152,7 @@
         <h2 class="visually-hidden">Категории товаров</h2>
         <ul>
           <li><a class="vr-glasses" href="#no_scroll"><span>Виртуальная реальность</span></a></li>
-          <li><a class="monopods" href="#no_scroll"><span>Моноподы <br> для селфи</span></a></li>
+          <li><a class="monopods" href="catalog-monopods.html"><span>Моноподы <br> для селфи</span></a></li>
           <li><a class="cameras" href="#no_scroll"><span>Экшн-камеры</span></a></li>
           <li><a class="bracelets" href="#no_scroll"><span>Фитнес-браслеты</span></a></li>
           <li><a class="watches" href="#no_scroll"><span>Умные часы</span></a></li>
@@ -233,7 +235,7 @@
     </main>
     <footer class="page-footer">
       <div class="footer-container">
-        <h2 class="visually-hidden">Контакты и навигация по сайту</h2><a class="link footer-logo-link" href="#no_scroll"><img src="img/logos/logo-footer.svg" width="145" height="36" alt="Логотип магазина Device."></a>
+        <h2 class="visually-hidden">Контакты и навигация по сайту</h2><a class="states-default footer-logo-link" href="#no_scroll"><img src="img/logos/logo-footer.svg" width="145" height="36" alt="Логотип магазина Device."></a>
         <p class="address">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
         <ul class="footer-navigation-list">
           <li class="heading-2"><a class="shipping" href="#no_scroll">Доставка</a></li>

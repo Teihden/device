@@ -1,0 +1,112 @@
+header.monopods-header
+  h1.heading-1 Моноподы для селфи
+  ul.breadcrumbs
+    li
+      a.states-default(href="index.html") Главная
+    li
+      a.states-default(href="#no_scroll") Каталог товаров
+    li
+      a Моноподы для селфи
+section.monopods-catalog
+  .monopods-container
+    form(action="https://echo.htmlacademy.ru" method="get")
+      h2.filter-heading фильтр:
+      fieldset.range
+        legend Стоимость
+        .range-scale
+          .range-selected(style="left: 0; right: 72px;")
+            button.range-min(type="submit" aria-label="Минимальная стоимость.")
+            button.range-max(type="submit" aria-label="Максимальная стоимость.")
+        .range-price
+          label.lable-price-min
+            span от
+            input#price-min(type="number" name="price-min" value="0" min="0" max="8000" required)
+          label.lable-price-max
+            span до
+            input#price-max(type="number" name="price-max" value="5000" min="0" max="8000" required)
+      fieldset.colors
+        legend Цвет
+        ul
+          li
+            label.states-default
+              input.states-default(type="checkbox" name="colors" value="black" checked)
+              span Черный
+          li
+            label.states-default
+              input.states-default(type="checkbox" name="colors" value="white" checked)
+              span Белый
+          li
+            label.states-default
+              input.states-default(type="checkbox" name="colors" value="blue")
+              span Синий
+          li
+            label.states-default
+              input.states-default(type="checkbox" name="colors" value="red")
+              span Красный
+          li
+            label.states-default
+              input.states-default(type="checkbox" name="colors" value="pink")
+              span Розовый
+      fieldset.bluetooth
+        legend Bluetooth
+        ul
+          li
+            label.states-default
+              input.states-default(type="radio" name="bluetooth" value="yes" checked)
+              span Есть
+          li
+            label.states-default
+              input.states-default(type="radio" name="bluetooth" value="no")
+              span Нет
+      button.button-streak.button-filter(type="submit") Показать
+    .col-right
+      .sort
+        h2 сортировка:
+        select.states-default#select(name="select" aria-label="Сортировка.")
+          option Популярные
+          option Дорогие
+          option Дешевые
+        .sort-buttons
+          button.sort-min(type="button")
+          button.sort-max(type="button")
+      .goods
+        ul.goods-cards
+          li
+            a.goods-card-link(href="#no_scroll")
+              img(src="img/monopods/goods-1.jpg" width="360" height="380" alt="Любительская селфи-палка.")
+              h3 Любительская #[br] селфи-палка
+              span.goods-price 500 ₽
+              span.heading-2.goods-detailed Подробнее
+          li.goods-new
+            a.goods-card-link(href="#no_scroll")
+              img(src="img/monopods/goods-2.jpg" width="360" height="380" alt="Профессиональная селфи-палка.")
+              h3 Профессиональная селфи-палка
+              span.goods-price 1 500 ₽
+              span.heading-2.goods-detailed Подробнее
+          li
+            a.goods-card-link(href="#no_scroll")
+              img(src="img/monopods/goods-3.jpg" width="360" height="380" alt="Непотопляемая селфи-палка.")
+              h3 Непотопляемая #[br] селфи-палка
+              span.goods-price 2 500 ₽
+              span.heading-2.goods-detailed Подробнее
+          li
+            a.goods-card-link(href="#no_scroll")
+              img(src="img/monopods/goods-4.jpg" width="360" height="380" alt="Селфи-палка «Следуй за мной».")
+              h3 Селфи-палка «Следуй за мной»
+              span.goods-price 1 500 ₽
+              span.heading-2.goods-detailed Подробнее
+        button.button-more(type="button") Загрузить ещЁ
+        .pagination
+          button.heading-2(type="button" disabled) #[span Назад]
+          ol.pagination-list
+            li
+              a.page-active.place-center(tabindex="-1") 1
+            li
+              a.place-center(href="#no_scroll") 2
+            li
+              a.place-center(href="#no_scroll") 3
+            li
+              a.place-center(href="#no_scroll") &hellip;
+            li
+              a.place-center(href="#no_scroll") 15
+          button.heading-2(type="button") #[span Вперёд]
