@@ -28,9 +28,6 @@ server
 # Runs pug-lint, Pug, Stylelint, Sass, PurgeCSS, Autoprefixer in sequential order
 build
 
-# # Deploys directory `build/` to Surge
-# deploy
-
 # Runs pug-lint, Pug, Stylelint, Sass, starts Browsersync server
 # in sequential order and wathes for changes
 default

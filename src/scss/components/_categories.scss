@@ -6,29 +6,36 @@
     display: grid;
     grid-template-columns: repeat(6, 160px);
     gap: 40px;
-    padding: 0;
+
     margin: 0;
+    padding: 0;
+
     list-style: none;
   }
 
   a {
     display: block;
+
     width: 160px;
     min-height: 252px;
-    font-family: Raleway;
+
+    color: $black ;
+
     font-weight: 800;
     font-size: 18px;
+    font-family: Raleway, sans-serif;
     line-height: 24px;
     letter-spacing: -0.02em;
-    color: $black ;
     text-decoration: none;
 
     &::before {
       content: '';
       display: block;
-      height: 160px;
+
       width: 160px;
+      height: 160px;
       margin-bottom: 32px;
+
       background-color: $yellow-light;
     }
 
@@ -42,6 +49,7 @@
 
     &:active {
       outline: none;
+
       opacity: 0.3;
     }
   }

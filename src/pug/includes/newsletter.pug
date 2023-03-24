@@ -2,9 +2,9 @@ section.newsletteter
   .newsletteter-container
     h2.heading-1.newsletteter-heading Подпишитесь на рассылку
     p.newsletteter-text Еженедельный дайджест с обзорами новинок,#[br] длительными тест-драйвами, распаковками, а также акции, спецпредложения и вот это вот всё.
-    form.email-form(action="https://echo.htmlacademy.ru" method="post")
-      label.email-label
+    form.newsletteter-form(action="https://echo.htmlacademy.ru" method="post")
+      label.newsletteter-label(for="newsletteter-email")
         span.visually-hidden Ваш e-mail
-      input.email-input#email(type="email" name="email" placeholder="Ваш e-mail" required)
-      button.email-button.button-transparent.place-center(type="submit") #[span Подписаться]
+      input.newsletteter-input#newsletteter-email(type="email" name="email" placeholder="Ваш e-mail" required)
+      button.newsletteter-button.button-transparent.place-center(type="submit") #[span Подписаться]
     span.no-charge Это бесплатно

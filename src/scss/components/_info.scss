@@ -1,14 +1,17 @@
 .info {
   display: flex;
+
   width: 1160px;
   margin: 0 auto 70px;
 
   section {
     &::before {
-      display: block;
       content: '';
+      display: block;
+
       width: 84px;
       height: 7px;
+
       background-color: $black;
     }
   }
@@ -25,24 +28,30 @@
 .shippers {
   margin: 0 0 30px;
   padding-left: 37.5px;
+
   list-style: none;
 
   li {
     position: relative;
+
+    color: $black;
+
     font-weight: 700;
     font-size: 18px;
     line-height: 20px;
-    color: $black;
 
     &::before {
-      position: absolute;
-      left: -34px;
-      top: 50%;
       content: '';
-      height: 8px;
+      position: absolute;
+      top: 50%;
+      left: -34px;
+
       width: 8px;
+      height: 8px;
       border-radius: 50%;
+
       background-color: $yellow-dark;
+
       transform: translateY(-50%);
     }
   }
@@ -61,22 +70,25 @@
 }
 
 .contacts {
-  width: 532px;
   flex-shrink: 0;
 
+  width: 532px;
+
   h4 {
+    margin: 29px 0 15px;
+
     font-weight: 700;
     font-size: 24px;
     line-height: 30px;
-    margin: 29px 0 15px;
   }
 
   a {
+    color: $dark;
+
     font-weight: 400;
+    font-style: normal;
     font-size: 18px;
     line-height: 30px;
-    color: $dark;
-    font-style: normal;
 
     &:hover {
       opacity: 0.6;
@@ -88,6 +100,7 @@
 
     &:active {
       outline: none;
+
       opacity: 0.3;
     }
   }
@@ -98,12 +111,14 @@
 }
 
 .location {
-  font-style: normal;
   margin: 0;
+
+  font-style: normal;
 }
 
 .working-time {
-  padding: 0;
   margin: 0 0 30px;
+  padding: 0;
+
   list-style: none;
 }

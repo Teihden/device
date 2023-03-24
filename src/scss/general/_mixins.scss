@@ -1,7 +1,10 @@
 @mixin button-default {
   display: block;
+
   border: none;
+
   background-color: transparent;
+
   cursor: pointer;
 }
 
@@ -14,8 +17,8 @@
   .#{$img} {
     &::before {
     background-image: url(../img/categories/#{$img}.svg);
-    background-repeat: no-repeat;
     background-position: center;
+    background-repeat: no-repeat;
     }
   }
 }

@@ -1,6 +1,46 @@
 .page-footer {
-  color: $white;
   background-color: $dark;
+  color: $white;
+}
+
+.telephone {
+  justify-self: right;
+
+  min-width: 174px;
+  margin: 7px 0 0;
+
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.telephone-link {
+  color: $white;
+
+  font-size: 16px;
+  line-height: 20px;
+
+  text-decoration-skip-ink: none;
+  text-underline-offset: 1px;
+  text-underline-position: underline;
+
+  &:hover {
+    color: $yellow-dark;
+
+    text-decoration-color: $yellow-dark;
+  }
+
+  &:focus {
+    @include focus-default;
+  }
+
+  &:active {
+    color: $yellow-dark;
+    outline: none;
+
+    opacity: 0.3;
+
+    text-decoration-color: $yellow-dark;
+  }
 }
 
 .footer-container {
@@ -8,25 +48,29 @@
   display: grid;
   grid-template-columns: 240px 640px 240px;
   gap: 35px 20px;
+
   width: 1160px;
-  padding: 62px 0 61px;
   margin: 0 auto;
+  padding: 62px 0 61px;
 
   &::before {
-    grid-area: 3 / 1 / 4 / 2;
-    margin: 29px 0 0 1px;
     content: "";
-    left: 0;
     bottom: 0;
+    left: 0;
     display: block;
-    height: 7px;
+    grid-area: 3 / 1 / 4 / 2;
+
     width: 80px;
+    height: 7px;
+    margin: 29px 0 0 1px;
+
     background-color: $yellow-dark;
   }
 }
 
 .footer-logo-link {
   grid-column: 1 / -1;
+
   width: 145px;
   height: 36px;
 
@@ -36,32 +80,39 @@
 }
 
 .address {
+  margin: 0;
+
   font-size: 16px;
   line-height: 20px;
-  margin: 0;
 
 }
 
 .footer-navigation-list {
-  max-width: 640px;
   display: flex;
   flex-wrap: wrap;
   gap: 20px 34px;
-  padding: 0;
+
+  max-width: 640px;
   margin: 5px auto 0;
+  padding: 0;
+
   list-style: none;
 
   a {
     display: block;
+
     color: $white;
+
     text-decoration: none;
 
     &:hover {
       color: $yellow-dark;
+
       text-decoration: underline solid $yellow-dark;
+
       text-decoration-thickness: 2px;
-      text-underline-position: under;
       text-underline-offset: 4px;
+      text-underline-position: under;
     }
 
     &:focus {
@@ -70,78 +121,51 @@
 
     &:active {
       outline: none;
+
       text-decoration: underline solid $yellow-dark;
+
+      opacity: 0.3;
+
       text-decoration-thickness: 2px;
-      text-underline-position: under;
       text-underline-offset: 4px;
-      opacity: 0.3;
-    }
-  }
-}
-
-.telephone {
-  justify-self: right;
-  min-width: 174px;
-  margin: 7px 0 0;
-  font-size: 16px;
-  line-height: 20px;
-
-  a {
-    font-size: 16px;
-    line-height: 20px;
-    color: $white;
-    text-decoration-skip-ink: none;
-    text-underline-position: underline;
-    text-underline-offset: 1px;
-
-    &:hover {
-      color: $yellow-dark;
-      text-decoration-color: $yellow-dark;
-    }
-
-    &:focus {
-      @include focus-default;
-    }
-
-    &:active {
-      outline: none;
-      color: $yellow-dark;
-      text-decoration-color: $yellow-dark;
-      opacity: 0.3;
+      text-underline-position: under;
     }
   }
 }
 
 .contacts-list {
-  justify-self: center;
-  grid-column: 2 / -2;
   display: flex;
   flex-wrap: wrap;
+  grid-column: 2 / -2;
   gap: 15px;
-  padding: 0;
+  justify-self: center;
+
   margin: 14px 0 0;
+  padding: 0;
+
   list-style: none;
+}
 
-  a {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.3);;
+.contacts-list-link {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  
+  background-color: rgb(255 255 255 / 30%);;
 
-    &:hover {
-      background-color: $yellow-dark;
-    }
+  &:hover {
+    background-color: $yellow-dark;
+  }
 
-    &:focus {
-      @include focus-default;
-    }
+  &:focus {
+    @include focus-default;
+  }
 
-    &:active {
-      outline: none;
+  &:active {
+    outline: none;
 
-      span {
-        opacity: 0.3;
-      }
+    span {
+      opacity: 0.3;
     }
   }
 }
@@ -149,30 +173,35 @@
 .telegram {
   width: 14px;
   height: 12px;
-  background-image: url(../img/icons/telegram.svg);
+
+  background-image: url("../img/icons/telegram.svg");
   background-repeat: no-repeat;
 }
 
 .youtube {
   width: 16px;
   height: 11px;
-  background-image: url(../img/icons/youtube.svg);
+
+  background-image: url("../img/icons/youtube.svg");
   background-repeat: no-repeat;
 }
 
 .twitter {
   width: 15px;
   height: 14px;
-  background-image: url(../img/icons/twitter.svg);
+
+  background-image: url("../img/icons/twitter.svg");
   background-repeat: no-repeat;
 }
 
 .logo-academy-link {
-  margin-top: 15px;
-  justify-self: right;
   display: block;
-  height: 33px;
+  justify-self: right;
+
   width: 115px;
+  height: 33px;
+  margin-top: 15px;
+
   color: $yellow-dark;
 
   &:hover {
@@ -184,8 +213,9 @@
   }
 
   &:active {
-    outline: none;
     color: $white;
+    outline: none;
+
     opacity: 0.3;
   }
 }

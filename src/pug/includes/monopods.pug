@@ -15,8 +15,8 @@ section.monopods-catalog
         legend Стоимость
         .range-scale
           .range-selected(style="left: 0; right: 72px;")
-            button.range-min(type="submit" aria-label="Минимальная стоимость.")
-            button.range-max(type="submit" aria-label="Максимальная стоимость.")
+            button.range-scale-button.range-min(type="submit" aria-label="Минимальная стоимость.")
+            button.range-scale-button.range-max(type="submit" aria-label="Максимальная стоимость.")
         .range-price
           label.lable-price-min
             span от
@@ -49,12 +49,12 @@ section.monopods-catalog
               span Розовый
       fieldset.bluetooth
         legend Bluetooth
-        ul
-          li
+        ul.bluetooth-list
+          li.bluetooth-item
             label.states-default
               input.states-default(type="radio" name="bluetooth" value="yes" checked)
               span Есть
-          li
+          li.bluetooth-item
             label.states-default
               input.states-default(type="radio" name="bluetooth" value="no")
               span Нет
@@ -97,16 +97,16 @@ section.monopods-catalog
               span.heading-2.goods-detailed Подробнее
         button.button-more(type="button") Загрузить ещЁ
         .pagination
-          button.heading-2(type="button" disabled) #[span Назад]
+          button.pagination-button.heading-2(type="button" disabled) #[span Назад]
           ol.pagination-list
-            li
+            li.pagination-item
               a.page-active.place-center(tabindex="-1") 1
-            li
+            li.pagination-item
               a.place-center(href="#no_scroll") 2
-            li
+            li.pagination-item
               a.place-center(href="#no_scroll") 3
-            li
+            li.pagination-item
               a.place-center(href="#no_scroll") &hellip;
-            li
+            li.pagination-item
               a.place-center(href="#no_scroll") 15
-          button.heading-2(type="button") #[span Вперёд]
+          button.pagination-button.heading-2(type="button") #[span Вперёд]

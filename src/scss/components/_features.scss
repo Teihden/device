@@ -1,23 +1,27 @@
 .features-list {
-  padding-bottom: 72px;
-  background: linear-gradient($light, $light) no-repeat left 102px;
   margin-bottom: 70px;
+  padding-bottom: 72px;
+
+  background: linear-gradient($light, $light) no-repeat left 102px;
 }
 
 .features-container {
   display: flex;
   flex-wrap: wrap;
-  column-gap: 116px;
+
   width: 1160px;
   margin: 0 auto;
+
+  column-gap: 116px;
 
 }
 
 .tabs {
   width: 287px;
-  padding: 64px 0 65px;
   margin: 0;
+  padding: 64px 0 65px;
   border-right: 7px solid $black;
+
   list-style: none;
 
   li:not(:last-child) {
@@ -29,16 +33,20 @@
 
     span {
       display: block;
+
       width: 160px;
       padding-inline: 10px;
+
       background-color: transparent;
     }
   }
 
   .active {
     width: 100%;
-    color: $yellow-light;
+
     background-color: $black;
+    color: $yellow-light;
+
     transition: padding 0.2s ease-out 0.3s;
 
     &::before {
@@ -53,9 +61,10 @@
 
 .delivery {
   width: 694px;
-  background-image: url(../img/features/delivery.svg);
-  background-repeat: no-repeat;
+
+  background-image: url("../img/features/delivery.svg");
   background-position: right center;
+  background-repeat: no-repeat;
 
   p {
     width: 455px;
@@ -69,9 +78,10 @@
 
 .warranty {
   width: 729px;
-  background-image: url(../img/features/warranty.svg);
-  background-repeat: no-repeat;
+
+  background-image: url("../img/features/warranty.svg");
   background-position: right center;
+  background-repeat: no-repeat;
 
   p {
     width: 480px;
@@ -85,9 +95,10 @@
 
 .credit {
   width: 729px;
-  background-image: url(../img/features/credit.svg);
-  background-repeat: no-repeat;
+
+  background-image: url("../img/features/credit.svg");
   background-position: right center;
+  background-repeat: no-repeat;
 
   p {
     width: 480px;
@@ -100,54 +111,62 @@
 }
 
 .features-description {
-  margin: 0;
-  padding: 0;
-  list-style: none;
   display: flex;
   align-items: center;
 
-  li {
-    font-size: 18px;
-    line-height: 30px;
-  }
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.features-description-item {
+  font-size: 18px;
+  line-height: 30px;
 }
 
 .rare-goods {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+
   width: 1160px;
   height: 100px;
   margin: 0 auto;
-  background-color: $light;
   margin-bottom: 70px;
-  font-family: Raleway;
+
+  background-color: $light;
+  color: $black;
+
   font-weight: 800;
   font-size: 20px;
+  font-family: Raleway, sans-serif;
   line-height: 23px;
-  text-align: center;
   letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: $black;
+  text-align: center;
   text-decoration: none;
+  text-transform: uppercase;
 
   &::before {
     content: '';
-    height: 100px;
+
     width: 125px;
+    height: 100px;
+
     background-color: $yellow-light;
-    background-image: url(../img/icons/rare-goods.svg);
-    background-repeat: no-repeat;
+    background-image: url("../img/icons/rare-goods.svg");
     background-position: center;
+    background-repeat: no-repeat;
   }
 
   .tooltip {
-    height: 40px;
     width: 40px;
-    background-color: rgba(220, 220, 220, 0.5);
-    color: $black;
-    border-radius: 50%;
+    height: 40px;
     margin: 0 43px 0 35px;
+    border-radius: 50%;
+
+    background-color: rgb(220 220 220 / 50%);
+    color: $black;
 
     svg {
       opacity: 0.3;
@@ -177,6 +196,7 @@
 
   &:active {
     outline: none;
+
     opacity: 0.3;
   }
 }

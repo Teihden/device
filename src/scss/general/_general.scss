@@ -1,26 +1,29 @@
 // Initial setups
 @font-face {
-  font-family: Rubik;
   font-weight: 400;
   font-style: normal;
-  font-display: swap;
+  font-family: Rubik;
   src: url("../fonts/Rubik-Regular.woff2") format("woff2");
+
+  font-display: swap;
 }
 
 @font-face {
-  font-family: Rubik;
   font-weight: 700;
   font-style: normal;
-  font-display: swap;
+  font-family: Rubik;
   src: url("../fonts/Rubik-Bold.woff2") format("woff2");
+
+  font-display: swap;
 }
 
 @font-face {
-  font-family: Raleway;
   font-weight: 800;
   font-style: normal;
-  font-display: swap;
+  font-family: Raleway;
   src: url("../fonts/Raleway-ExtraBold.woff2") format("woff2");
+
+  font-display: swap;
 }
 
 *,
@@ -36,57 +39,62 @@ html {
 body {
   display: flex;
   flex-direction: column;
+
   min-width: 1240px;
   min-height: 100%;
   margin: 0;
-  font-family: Rubik, sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 30px;
-  color: $dark;
+
   background-color: $white;
+  color: $dark;
+
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  font-family: Rubik, sans-serif;
+  line-height: 30px;
 }
 
 main {
   flex-grow: 1;
 }
 
-//Heading
+// Heading
 .heading-1 {
-  font-family: Raleway;
   font-weight: 800;
   font-size: 50px;
+  font-family: Raleway, sans-serif;
   line-height: 50px;
 }
 
 .heading-2 {
-  font-family: Raleway;
   font-weight: 800;
   font-size: 18px;
+  font-family: Raleway, sans-serif;
   line-height: 21px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
 }
 
 .heading-4 {
-  font-family: Rubik;
   font-weight: 700;
   font-size: 24px;
+  font-family: Rubik, sans-serif;
   line-height: 30px;
 }
 
 // Paragraphs
 .text-bold {
+  color: $black;
+
   font-weight: 700;
   font-size: 18px;
   line-height: 20px;
-  color: $black;
 }
 
 // Links
 .states-default {
   display: block;
+
   text-decoration: none;
 
   &:hover {
@@ -99,6 +107,7 @@ main {
 
   &:active {
     outline: none;
+
     opacity: 0.3;
   }
 
@@ -107,6 +116,7 @@ main {
 
     &:hover {
       outline: none;
+
       opacity: 0.1;
     }
 
@@ -119,30 +129,38 @@ main {
 // Buttons
 .button-streak {
   @include button-default;
+
   position: relative;
   z-index: 10;
+
   padding: 10px 10px 9px;
-  font-family: Raleway;
+
+  color: $black;
+
   font-weight: 800;
   font-size: 18px;
+  font-family: Raleway, sans-serif;
   line-height: 21px;
   letter-spacing: 0.2em;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: $black;
   text-align: center;
-  user-select: none;
+  text-decoration: none;
+  text-transform: uppercase;
+
   cursor: pointer;
+  user-select: none;
 
   &::before {
+    content: '';
     position: absolute;
-    z-index: -10;
     top: 50%;
     left: 0;
-    content: '';
+    z-index: -10;
+
     width: 100%;
     height: 8px;
+
     background-color: $yellow-light;
+
     transform: translateY(-50%);
   }
 
@@ -155,8 +173,8 @@ main {
   }
 
   &:active {
-    outline: none;
     background-color: $sunglow;
+    outline: none;
 
     &::before {
       background-color: $sunglow;
@@ -172,22 +190,24 @@ main {
     }
 
     &:active {
-      outline: none;
       background-color: transparent;
+      outline: none;
     }
   }
 }
 
 .button-transparent {
-  color: $black;
   background-color: transparent;
-  user-select: none;
+  color: $black;
+
   cursor: pointer;
+  user-select: none;
 
   &:hover {
+    border-color: transparent;
+
     background: $black;
     color: $white;
-    border-color: transparent;
   }
 
   &:focus {
@@ -196,10 +216,11 @@ main {
   }
 
   &:active {
-    outline: none;
-    color: $white;
-    background: $black;
     border-color: transparent;
+
+    background: $black;
+    color: $white;
+    outline: none;
 
     span {
       opacity: 0.3;
@@ -211,8 +232,8 @@ main {
     cursor: default;
 
     &:hover {
-      color: $black;
       background-color: transparent;
+      color: $black;
     }
 
     &:active {
