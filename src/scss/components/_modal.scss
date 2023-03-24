@@ -130,14 +130,13 @@
   column-gap: 40px;
 
   li {
-    display: flex;
-    flex-direction: column;
-
     width: 360px;
   }
 }
 
 .modal-name-label {
+  display: block;
+
   margin-bottom: 14px;
 }
 
@@ -152,6 +151,9 @@
 
 .modal-name-input,
 .modal-email-input {
+  display: block;
+
+  width: 100%;
   padding: 20px 55px 20px 20px;
 
   background-position: right 21px top 24px;
@@ -206,6 +208,8 @@
 }
 
 .modal-quantity {
+  display: block;
+
   margin-bottom: 14px;
 }
 

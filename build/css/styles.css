@@ -1293,6 +1293,8 @@ main {
   opacity: 0.5;
 }
 .newsletteter-input:focus {
+  outline: 2px solid #af4fff;
+  outline-offset: 2px;
   background-color: #dcdcdc;
 }
 .newsletteter-input:disabled {
@@ -1495,11 +1497,10 @@ main {
   padding: 0 0 0 19px;
   border: none;
   background-color: transparent;
-  color: inherit;
+  color: rgba(0, 0, 0, 0.3);
   font-size: 14px;
   font-family: inherit;
   line-height: 18px;
-  opacity: 0.3;
   appearance: textfield;
 }
 .range-price input::-webkit-outer-spin-button, .range-price input::-webkit-inner-spin-button {
@@ -1633,12 +1634,18 @@ main {
   padding: 0;
   border: none;
   background-color: transparent;
+  cursor: pointer;
+  user-select: none;
+}
+.sort-buttons button .sort-button {
+  display: block;
+  width: 11px;
+  height: 10px;
+  background-color: transparent;
   background-image: url("../img/icons/button-sort.svg");
   background-position: center;
   background-repeat: no-repeat;
   opacity: 0.2;
-  cursor: pointer;
-  user-select: none;
 }
 .sort-buttons button:hover {
   opacity: 0.5;
@@ -1859,10 +1866,10 @@ main {
   background-color: #dcdcdc;
   outline: none;
 }
-.pagination-button:active span {
+.pagination-button:active .pagination-button-text {
   opacity: 0.3;
 }
-.pagination-button:disabled span {
+.pagination-button:disabled .pagination-button-text {
   opacity: 0.3;
 }
 .pagination-button:disabled:hover {
@@ -1881,40 +1888,44 @@ main {
   padding: 0;
   list-style: none;
 }
-.pagination-list a {
+
+.pagination-item {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.pagination-item-link {
   width: 40px;
   height: 40px;
   color: #444;
   font-size: 16px;
   line-height: 20px;
   text-decoration: none;
+}
+.pagination-item-link span {
   opacity: 0.3;
 }
-.pagination-list a:hover {
+.pagination-item-link:hover {
   opacity: 1;
 }
-.pagination-list a:focus {
+.pagination-item-link:focus {
   outline: 2px solid #af4fff;
   outline-offset: 2px;
 }
-.pagination-list a:active {
+.pagination-item-link:active {
   outline: none;
   opacity: 0.1;
 }
-.pagination-list .pagination-item {
-  font-size: 16px;
-  line-height: 20px;
-}
-.pagination-list .page-active {
+.pagination-item-link .page-active span {
   opacity: 0.6;
 }
-.pagination-list .page-active:hover {
+.pagination-item-link .page-active:hover {
   opacity: 0.6;
 }
-.pagination-list .page-active:focus {
+.pagination-item-link .page-active:focus {
   outline: none;
 }
-.pagination-list .page-active:active {
+.pagination-item-link .page-active:active {
   outline: none;
   opacity: 0.6;
 }
@@ -2026,12 +2037,11 @@ main {
   column-gap: 40px;
 }
 .modal-user li {
-  display: flex;
-  flex-direction: column;
   width: 360px;
 }
 
 .modal-name-label {
+  display: block;
   margin-bottom: 14px;
 }
 
@@ -2044,6 +2054,8 @@ main {
 
 .modal-name-input,
 .modal-email-input {
+  display: block;
+  width: 100%;
   padding: 20px 55px 20px 20px;
   background-position: right 21px top 24px;
   background-repeat: no-repeat;
@@ -2090,6 +2102,7 @@ main {
 }
 
 .modal-quantity {
+  display: block;
   margin-bottom: 14px;
 }
 

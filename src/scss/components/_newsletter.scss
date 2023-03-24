@@ -53,6 +53,8 @@
   }
 
   &:focus {
+    @include focus-default;
+
     background-color: $gray;
   }
 

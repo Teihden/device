@@ -67,8 +67,8 @@ section.monopods-catalog
           option Дорогие
           option Дешевые
         .sort-buttons
-          button.sort-min(type="button")
-          button.sort-max(type="button")
+          button.sort-min.place-center(type="button") #[span.sort-button]
+          button.sort-max.place-center(type="button") #[span.sort-button]
       .goods
         ul.goods-cards
           li
@@ -97,16 +97,16 @@ section.monopods-catalog
               span.heading-2.goods-detailed Подробнее
         button.button-more(type="button") Загрузить ещЁ
         .pagination
-          button.pagination-button.heading-2(type="button" disabled) #[span Назад]
+          button.pagination-button.heading-2(type="button" disabled) #[span.pagination-button-text Назад]
           ol.pagination-list
             li.pagination-item
-              a.page-active.place-center(tabindex="-1") 1
+              a.pagination-item-link.page-active.place-center(tabindex="-1") #[span 1]
             li.pagination-item
-              a.place-center(href="#no_scroll") 2
+              a.pagination-item-link.place-center(href="#no_scroll") #[span 2]
             li.pagination-item
-              a.place-center(href="#no_scroll") 3
+              a.pagination-item-link.place-center(href="#no_scroll") #[span 3]
             li.pagination-item
-              a.place-center(href="#no_scroll") &hellip;
+              a.pagination-item-link.place-center(href="#no_scroll") #[span &hellip;]
             li.pagination-item
-              a.place-center(href="#no_scroll") 15
-          button.pagination-button.heading-2(type="button") #[span Вперёд]
+              a.pagination-item-link.place-center(href="#no_scroll") #[span 15]
+          button.pagination-button.heading-2(type="button") #[span.pagination-button-text Вперёд]

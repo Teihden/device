@@ -1,8 +1,12 @@
 header.page-header
   h2.visually-hidden Навигация по сайту
   nav
-    a.states-default.header-logo-link(href="#no_scroll")
-      img(src="img/logos/logo-header.svg" width="145" height="36" alt="Логотип магазина Device.")
+    if page === "index"
+      a.states-default.header-logo-link
+        img(src="img/logos/logo-header.svg" width="145" height="36" alt="Логотип магазина Device.")
+    else
+      a.states-default.header-logo-link(href="index.html")
+        img(src="img/logos/logo-header.svg" width="145" height="36" alt="Логотип магазина Device.")
     .header-navigation-site
       form(action="https://echo.htmlacademy.ru" method="get")
         label.search-label
