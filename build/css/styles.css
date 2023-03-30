@@ -1968,16 +1968,16 @@ main {
   outline: none;
   opacity: 0.1;
 }
-.pagination-item-link .page-active span {
+.pagination-item-link.page-active span {
   opacity: 0.6;
 }
-.pagination-item-link .page-active:hover {
+.pagination-item-link.page-active:hover {
   opacity: 0.6;
 }
-.pagination-item-link .page-active:focus {
+.pagination-item-link.page-active:focus {
   outline: none;
 }
-.pagination-item-link .page-active:active {
+.pagination-item-link.page-active:active {
   outline: none;
   opacity: 0.6;
 }

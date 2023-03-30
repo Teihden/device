@@ -17,14 +17,16 @@
 }
 
 .slider-container {
-  width: 560px;
   overflow: hidden;
+  width: 560px;
 }
 
 .products-list {
   display: flex;
+
   margin: 0;
   padding: 0;
+
   list-style-type: none;
 
   img {

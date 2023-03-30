@@ -118,7 +118,7 @@ const carousel = {
     newActiveArticle.classList.remove('closed');
   },
 
-  initCarousel() {
+  initAutoplay() {
     this.intervalID = setInterval(() => this.goToSlide(1), this.autoplayDelay);
   },
 
@@ -128,7 +128,7 @@ const carousel = {
     sliderButton.setAttribute('disabled', '');
     clearInterval(this.intervalID);
     this.goToSlide(numberOfSlidesToMove);
-    this.initCarousel();
+    this.initAutoplay();
 
     setTimeout(() => {
       sliderButton.removeAttribute('disabled');
@@ -152,11 +152,11 @@ const carousel = {
 
         clearInterval(this.intervalID);
         this.goToSlide(numberOfSlidesToMove);
-        this.initCarousel();
+        this.initAutoplay();
       });
     }
 
-    this.initCarousel();
+    this.initAutoplay();
   },
 };
 

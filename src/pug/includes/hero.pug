@@ -12,7 +12,7 @@ section.hero
     button.states-default.button-previous(type="button" aria-label="Предыдущее фото.")
     button.states-default.button-next(type="button" aria-label="Следующее фото.")
   ol.articles
-    li#article-0
+    li#article-0(data-count="01")
       article
         h3.visually-hidden Квадрокоптер
         p.heading-1 Порхает как бабочка, жалит как пчела!
@@ -25,20 +25,20 @@ section.hero
           .group
             dt 50 м
             dd Радиус поражения
-    li.closed#article-1
+    li.closed#article-1(data-count="02")
       article
         h3.visually-hidden Фитнес-браслет
-        p.heading-1 Худеем правильно!
+        p.heading-1 Худеем #[br] правильно!
         p.article-text Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.
         a.button-streak(href="#no_scroll") Подробнее
         dl
           .group
             dt 48 часов
             dd Без подзарядки
-    li.closed.article-3#article-2
+    li.closed.article-3#article-2(data-count="03")
       article
         h3.visually-hidden Палка для селфи
-        p.heading-1 Делай селфи, как Бен Стиллер!
+        p.heading-1 Делай селфи, #[br] как Бен Стиллер!
         p.article-text Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 кг.
         a.button-streak(href="#no_scroll") Подробнее
         dl

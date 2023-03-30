@@ -720,7 +720,7 @@
     opacity: 0.1;
   }
 
-  .page-active {
+  &.page-active {
     span {
       opacity: 0.6;
     }

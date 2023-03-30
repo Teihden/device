@@ -91,7 +91,7 @@ main {
   line-height: 20px;
 }
 
-// Links
+// Buttons & links
 .states-default {
   display: block;
   text-decoration: none;
@@ -123,7 +123,6 @@ main {
   }
 }
 
-// Buttons
 .button-streak {
   @include button-default;
 

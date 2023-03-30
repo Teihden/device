@@ -1,8 +1,12 @@
 footer.page-footer
   .footer-container
     h2.visually-hidden Контакты и навигация по сайту
-    a.states-default.footer-logo-link(href="#no_scroll")
-      img(src="img/logos/logo-footer.svg" width="145" height="36" alt="Логотип магазина Device.")
+    if page === "index"
+      a.states-default.footer-logo-link
+        img(src="img/logos/logo-footer.svg" width="145" height="36" alt="Логотип магазина Device.")
+    else
+      a.states-default.footer-logo-link(href="index.html")
+        img(src="img/logos/logo-footer.svg" width="145" height="36" alt="Логотип магазина Device.")
     p.address Санкт-Петербург, набережная реки Карповки, 5, литера П.
     ul.footer-navigation-list
       li.heading-2
