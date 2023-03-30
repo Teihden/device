@@ -67,8 +67,8 @@ section.monopods-catalog
           option Дорогие
           option Дешевые
         .sort-buttons
-          button.sort-min.place-center(type="button") #[span.sort-button]
-          button.sort-max.place-center(type="button") #[span.sort-button]
+          button.sort-min.place-center(type="button" aria-label="Сначала дорогие.") #[span.sort-button]
+          button.sort-max.place-center(type="button" aria-label="Сначала дешевые.") #[span.sort-button]
       .goods
         ul.goods-cards
           li
@@ -95,7 +95,7 @@ section.monopods-catalog
               h3 Селфи-палка «Следуй за мной»
               span.goods-price 1 500 ₽
               span.heading-2.goods-detailed Подробнее
-        button.button-more(type="button") Загрузить ещЁ
+        button.button-more(type="button") Загрузить ещё
         .pagination
           button.pagination-button.heading-2(type="button" disabled) #[span.pagination-button-text Назад]
           ol.pagination-list

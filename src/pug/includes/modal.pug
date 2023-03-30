@@ -2,7 +2,7 @@ section.modal#modal(hidden)
   .modal-inner
     .modal-header
       h2.heading-1 Доставка под заказ
-      button.modal-button-close.states-default(type="button")
+      button.modal-button-close.states-default(type="button" aria-label="Закрыть модальное окно.")
     form(action="https://echo.htmlacademy.ru/" method="post")
       ul.modal-user
         li
@@ -22,7 +22,7 @@ section.modal#modal(hidden)
             span.modal-button-tooltip
             p.modal-tooltip-text Постараемся найти, сколько нужно. Привезём сколько получится по требованиям к провозу багажа.
           .modal-quantity-buttons
-            button.modal-button-decrease.place-center(type="button") #[span]
+            button.modal-button-decrease.place-center(type="button" aria-label="Увеличить.") #[span]
             input.modal-quantity-input#modal-quantity-input(type="number" name="modal-quantity-input" value="1" min="1" max="99" placeholder="0" required)
-            button.modal-button-increase.place-center(type="button") #[span]
+            button.modal-button-increase.place-center(type="button" aria-label="Уменьшить.") #[span]
       button.modal-form-button.button-streak(type="submit") Отправить

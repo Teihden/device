@@ -24,26 +24,26 @@
           <ul class="header-navigation-user">
             <li class="login"><a class="states-default user-link login-link" href="#no_scroll">Войти</a>
             </li>
-            <li class="closed"><a class="states-default user-link logout-link" href="#no_scroll">Выйти</a></li>
+            <li class="closed"><a class="states-default user-link logout-link" href="#no_scroll"><span>Выйти</span></a></li>
             <li class="compare"><a class="states-default user-link compare-link" href="#no_scroll">Сравнить</a></li>
-            <li class="cart"><a class="states-default user-link cart-link" href="#no_scroll"><span class="place-center">2</span> Корзина</a>
-              <div class="shopping-cart">
+            <li class="cart"><a class="states-default user-link cart-link" href="#no_scroll"><span class="cart-output-quantity place-center">2</span> Корзина</a>
+              <div class="shopping-cart" id="shopping-cart">
                 <ul>
-                  <li class="cart-item"><a class="states-default cart-item-link"><img src="img/shopping-cart/product-1.jpg" width="39" height="43" alt="Любительская селфи-палка.">
+                  <li class="cart-item" data-price="800"><a class="states-default cart-item-link" href="#no_scroll"><img src="img/shopping-cart/shopping-cart-product-0.jpg" width="39" height="43" alt="Любительская селфи-палка.">
                       <p>Любительская селфи-палка</p></a>
-                    <button class="states-default" type="button" aria-label="Закрыть."></button>
+                    <button class="states-default cart-button-close" type="button" aria-label="Закрыть."></button>
                   </li>
-                  <li class="cart-item"><a class="states-default cart-item-link"><img src="img/shopping-cart/product-2.jpg" width="39" height="43" alt="Профессиональная селфи-палка.">
+                  <li class="cart-item" data-price="1200"><a class="states-default cart-item-link" href="#no_scroll"><img src="img/shopping-cart/shopping-cart-product-1.jpg" width="39" height="43" alt="Профессиональная селфи-палка.">
                       <p>Профессиональная селфи-палка</p></a>
-                    <button class="states-default" type="button" aria-label="Закрыть."></button>
+                    <button class="states-default cart-button-close" type="button" aria-label="Закрыть."></button>
                   </li>
                 </ul>
                 <div class="summary">
                   <p><span>Товаров:</span>
-                    <output>2</output>
+                    <output class="cart-output-quantity">2</output>
                   </p>
                   <p><span>Сумма:</span>
-                    <output>2000 ₽</output>
+                    <output class="cart-output-price">2000 ₽</output>
                   </p>
                 </div><a class="cart-link-more place-center heading-2" href="#no_scroll"><span>Открыть корзину</span></a>
               </div>
@@ -78,17 +78,20 @@
       <section class="hero">
         <h2 class="visually-hidden">Превью товаров</h2>
         <div class="slider">
-          <ol class="products">
-            <li id="product-1"><img src="img/hero/product-1.svg" width="560" height="560" alt="Квадрокоптер."></li>
-            <li class="closed" id="product-2"><img src="img/hero/product-2.svg" width="560" height="560" alt="Фитнес-браслеты" aria-hidden="true"></li>
-            <li class="closed" id="product-3"><img src="img/hero/product-3.svg" width="560" height="560" alt="Палка для селфи." aria-hidden="true"></li>
-          </ol>
-          <button class="states-default button-previous" type="button" aria-label="Следующее фото"></button>
-          <button class="states-default button-next" type="button" aria-label="Предыдущее фото"></button>
+          <div class="slider-container">
+            <ol class="products-list">
+              <li class="products-item-0"><img src="img/hero/product-0.svg" width="560" height="560" alt="Квадрокоптер."></li>
+              <li class="products-item-1"><img src="img/hero/product-1.svg" width="560" height="560" alt="Фитнес-браслеты" aria-hidden="true"></li>
+              <li class="products-item-2"><img src="img/hero/product-2.svg" width="560" height="560" alt="Палка для селфи." aria-hidden="true"></li>
+            </ol>
+          </div>
+          <button class="states-default button-previous" type="button" aria-label="Предыдущее фото."></button>
+          <button class="states-default button-next" type="button" aria-label="Следующее фото."></button>
         </div>
         <ol class="articles">
-          <li id="article-1" data-count="01">
+          <li id="article-0">
             <article>
+              <h3 class="visually-hidden">Квадрокоптер</h3>
               <p class="heading-1">Порхает как бабочка, жалит как пчела!</p>
               <p class="article-text">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p><a class="button-streak" href="#no_scroll">Подробнее</a>
               <dl>
@@ -103,8 +106,9 @@
               </dl>
             </article>
           </li>
-          <li class="closed" id="article-2" data-count="02">
+          <li class="closed" id="article-1">
             <article>
+              <h3 class="visually-hidden">Фитнес-браслет</h3>
               <p class="heading-1">Худеем правильно!</p>
               <p class="article-text">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p><a class="button-streak" href="#no_scroll">Подробнее</a>
               <dl>
@@ -115,8 +119,9 @@
               </dl>
             </article>
           </li>
-          <li class="closed article-3" id="article-3" data-count="03">
+          <li class="closed article-3" id="article-2">
             <article>
+              <h3 class="visually-hidden">Палка для селфи</h3>
               <p class="heading-1">Делай селфи, как Бен Стиллер!</p>
               <p class="article-text">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 кг.</p><a class="button-streak" href="#no_scroll">Подробнее</a>
               <dl>
@@ -138,13 +143,13 @@
         </ol>
         <ol class="hero-buttons">
           <li>
-            <button class="slide-button states-default slide-button-active" id="button-1" type="button" aria-label="Фото 1."></button>
+            <button class="slide-button states-default slide-button-active" id="button-0" type="button" aria-label="Фото 1."></button>
           </li>
           <li>
-            <button class="slide-button states-default" id="button-2" type="button" aria-label="Фото 2."></button>
+            <button class="slide-button states-default" id="button-1" type="button" aria-label="Фото 2."></button>
           </li>
           <li>
-            <button class="slide-button states-default" id="button-3" type="button" aria-label="Фото 3."></button>
+            <button class="slide-button states-default" id="button-2" type="button" aria-label="Фото 3."></button>
           </li>
         </ol>
       </section>
@@ -165,7 +170,7 @@
             <h2 class="visually-hidden">Преимущества</h2>
             <ul class="tabs">
               <li>
-                <button class="button-streak active" type="button" aria-label="Доставка." data-item="delivery"><span>Доставка</span></button>
+                <button class="button-streak tab-active" type="button" aria-label="Доставка." data-item="delivery"><span>Доставка</span></button>
               </li>
               <li>
                 <button class="button-streak" type="button" aria-label="Гарантия." data-item="warranty"><span>Гарантия</span></button>
@@ -217,8 +222,7 @@
           <ul class="working-time">
             <li>пн—пт: с 10:00 до 22:00</li>
             <li>сб—вс: с 10:00 до 19:00</li>
-          </ul>
-          <button class="button-streak">Напишите нам</button>
+          </ul><a class="contacts-email button-streak" href="mailto:">Напишите нам</a>
         </section>
       </section>
       <section class="newsletteter">
@@ -256,7 +260,7 @@
       <div class="modal-inner">
         <div class="modal-header">
           <h2 class="heading-1">Доставка под заказ</h2>
-          <button class="modal-button-close states-default" type="button"></button>
+          <button class="modal-button-close states-default" type="button" aria-label="Закрыть модальное окно."></button>
         </div>
         <form action="https://echo.htmlacademy.ru/" method="post">
           <ul class="modal-user">
@@ -280,9 +284,9 @@
                 <p class="modal-tooltip-text">Постараемся найти, сколько нужно. Привезём сколько получится по требованиям к провозу багажа.</p>
               </div>
               <div class="modal-quantity-buttons">
-                <button class="modal-button-decrease place-center" type="button"><span></span></button>
+                <button class="modal-button-decrease place-center" type="button" aria-label="Увеличить."><span></span></button>
                 <input class="modal-quantity-input" id="modal-quantity-input" type="number" name="modal-quantity-input" value="1" min="1" max="99" placeholder="0" required>
-                <button class="modal-button-increase place-center" type="button"><span></span></button>
+                <button class="modal-button-increase place-center" type="button" aria-label="Уменьшить."><span></span></button>
               </div>
             </div>
           </div>
@@ -291,4 +295,5 @@
       </div>
     </section>
   </body>
+  <script src="js/script.js"></script>
 </html>

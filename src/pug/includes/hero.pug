@@ -1,18 +1,20 @@
 section.hero
   h2.visually-hidden Превью товаров
   .slider
-    ol.products
-      li#product-1
-        img(src="img/hero/product-1.svg" width="560" height="560" alt="Квадрокоптер.")
-      li.closed#product-2
-        img(src="img/hero/product-2.svg" width="560" height="560" alt="Фитнес-браслеты" aria-hidden="true")
-      li.closed#product-3
-        img(src="img/hero/product-3.svg" width="560" height="560" alt="Палка для селфи." aria-hidden="true")
-    button.states-default.button-previous(type="button" aria-label="Следующее фото")
-    button.states-default.button-next(type="button" aria-label="Предыдущее фото")
+    .slider-container
+      ol.products-list
+        li.products-item-0
+          img(src="img/hero/product-0.svg" width="560" height="560" alt="Квадрокоптер.")
+        li.products-item-1
+          img(src="img/hero/product-1.svg" width="560" height="560" alt="Фитнес-браслеты" aria-hidden="true")
+        li.products-item-2
+          img(src="img/hero/product-2.svg" width="560" height="560" alt="Палка для селфи." aria-hidden="true")
+    button.states-default.button-previous(type="button" aria-label="Предыдущее фото.")
+    button.states-default.button-next(type="button" aria-label="Следующее фото.")
   ol.articles
-    li#article-1(data-count="01")
+    li#article-0
       article
+        h3.visually-hidden Квадрокоптер
         p.heading-1 Порхает как бабочка, жалит как пчела!
         p.article-text Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.
         a.button-streak(href="#no_scroll") Подробнее
@@ -23,8 +25,9 @@ section.hero
           .group
             dt 50 м
             dd Радиус поражения
-    li.closed#article-2(data-count="02")
+    li.closed#article-1
       article
+        h3.visually-hidden Фитнес-браслет
         p.heading-1 Худеем правильно!
         p.article-text Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.
         a.button-streak(href="#no_scroll") Подробнее
@@ -32,8 +35,9 @@ section.hero
           .group
             dt 48 часов
             dd Без подзарядки
-    li.closed.article-3#article-3(data-count="03")
+    li.closed.article-3#article-2
       article
+        h3.visually-hidden Палка для селфи
         p.heading-1 Делай селфи, как Бен Стиллер!
         p.article-text Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 кг.
         a.button-streak(href="#no_scroll") Подробнее
@@ -49,8 +53,8 @@ section.hero
             dd Материал
   ol.hero-buttons
     li
-      button.slide-button.states-default.slide-button-active#button-1(type="button" aria-label="Фото 1.")
+      button.slide-button.states-default.slide-button-active#button-0(type="button" aria-label="Фото 1.")
     li
-      button.slide-button.states-default#button-2(type="button" aria-label="Фото 2.")
+      button.slide-button.states-default#button-1(type="button" aria-label="Фото 2.")
     li
-      button.slide-button.states-default#button-3(type="button" aria-label="Фото 3.")
+      button.slide-button.states-default#button-2(type="button" aria-label="Фото 3.")

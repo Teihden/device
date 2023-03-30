@@ -7,21 +7,18 @@
 
   form {
     display: flex;
-
     margin-right: 26px;
   }
 
   ul {
     margin: 0;
     padding: 0;
-
     list-style: none;
   }
 }
 
 .header-navigation-site {
   display: flex;
-
   margin-bottom: 30px;
 }
 
@@ -85,7 +82,7 @@
 
 .search-button {
   width: 160px;
-  padding: 8 14px;
+  padding: 8px 14px;
   border: 2px solid $black;
   border-radius: 0 50px 50px 0;
 
@@ -111,7 +108,6 @@
 
   .user-link {
     color: $black;
-
     font-size: 18px;
     line-height: 30px;
   }
@@ -130,7 +126,10 @@
 }
 
 .logout-link {
-  opacity: 0.3;
+  span {
+    opacity: 0.3;
+  }
+  
 }
 
 .compare {
@@ -148,15 +147,13 @@
 .shopping-cart {
   position: absolute;
   top: calc(100% + 6px);
-  left: -125px;
+  left: -124px;
   z-index: 50;
   display: none;
 
   width: 320px;
 
   background-color: $black;
-
-  opacity: 0;
 
   transition: opacity 0.2s ease-out 0.4s;
 
@@ -176,6 +173,13 @@
 
 .cart {
   position: relative;
+
+  &:hover>,
+  &:focus-within> {
+    .shopping-cart {
+      display: block;
+    }
+  }
 }
 
 .cart-link {
@@ -202,32 +206,26 @@
     line-height: 17px;
   }
 
-  &:hover+,
   &:focus+ {
     .shopping-cart {
       display: block;
-
-      opacity: 1;
     }
   }
 
-  &:hover::after,
-  &:focus::after {
+  &:hover::after {
     content: '';
     position: absolute;
     top: 30px;
     left: -30px;
 
     width: 180px;
-    height: 6px;
+    height: 7px;
 
     background-color: transparent;
 
     &:hover+ {
       .shopping-cart {
         display: block;
-
-        opacity: 1;
       }
     }
   }
@@ -235,7 +233,6 @@
 
 .cart-item {
   display: flex;
-
   padding: 20px;
 
   button {
@@ -262,7 +259,6 @@
 
   img {
     display: block;
-
     margin-right: 23px;
   }
 
@@ -350,7 +346,6 @@
     .heading-2 {
       position: relative;
       z-index: 40;
-
       color: $black;
     }
   }
@@ -359,12 +354,6 @@
   .list-item {
     width: 127px;
   }
-}
-
-.catalog-list {
-  position: relative;
-
-  margin-right: auto;
 }
 
 .catalog-heading {
@@ -438,18 +427,31 @@
 
   background-color: $yellow;
 
+  &:hover {
+    display: flex;
+  }
+
   a {
     color: $black;
-
     font-size: 16px;
     line-height: 18px;
   }
 }
 
-// Временно, потом убрать
-.catalog-heading:hover+ {
+.catalog-heading:focus+ {
   .catalog-container {
     display: flex;
+  }
+}
+
+.catalog-list {
+  position: relative;
+  margin-right: auto;
+
+  &:focus-within> {
+    .catalog-container {
+      display: flex;
+    }
   }
 }
 
@@ -458,6 +460,10 @@
 
   li:not(:last-child) {
     margin-bottom: 18px;
+  }
+
+  a {
+    width: fit-content;
   }
 }
 

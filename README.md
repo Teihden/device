@@ -2,9 +2,6 @@
 [![CI](https://github.com/Teihden/device/actions/workflows/CI.yml/badge.svg)](https://github.com/Teihden/device/actions/workflows/CI.yml)
 [![Github Pages](https://github.com/Teihden/device/actions/workflows/github-pages.yml/badge.svg)](https://github.com/Teihden/device/actions/workflows/github-pages.yml)
 
-<!-- ## Deployment to Surge
-https://hex-chat.surge.sh -->
-
 ## Setup
 
 ```shell

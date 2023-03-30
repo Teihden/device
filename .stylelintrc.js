@@ -6,6 +6,12 @@ module.exports = {
   plugins: [
     "stylelint-order"
   ],
+  "overrides": [
+    {
+      "files": ["*.scss", "**/*.scss"],
+      "customSyntax": "postcss-scss"
+    }
+  ],
   rules: {
     "declaration-empty-line-before": [
       "always",
@@ -59,7 +65,7 @@ module.exports = {
     "order/properties-order": [
       [
         {
-          emptyLineBefore: "always",
+          emptyLineBefore: "threshold",
           noEmptyLineBetween: true,
           properties: [
             "all",
@@ -123,7 +129,7 @@ module.exports = {
           ]
         },
         {
-          emptyLineBefore: "always",
+          emptyLineBefore: "threshold",
           noEmptyLineBetween: true,
           properties: [
             "box-sizing",
@@ -192,7 +198,7 @@ module.exports = {
           ]
         },
         {
-          emptyLineBefore: "always",
+          emptyLineBefore: "threshold",
           noEmptyLineBetween: true,
           properties: [
             "background",
@@ -224,7 +230,7 @@ module.exports = {
           ]
         },
         {
-          emptyLineBefore: "always",
+          emptyLineBefore: "threshold",
           noEmptyLineBetween: true,
           properties: [
             "font",
@@ -269,7 +275,7 @@ module.exports = {
           ]
         },
         {
-          emptyLineBefore: "always",
+          emptyLineBefore: "threshold",
           noEmptyLineBetween: true,
           properties: [
             "opacity",
@@ -282,7 +288,7 @@ module.exports = {
           ]
         },
         {
-          emptyLineBefore: "always",
+          emptyLineBefore: "threshold",
           noEmptyLineBetween: true,
           properties: [
             "unicode-bidi",
@@ -315,7 +321,7 @@ module.exports = {
           ]
         },
         {
-          emptyLineBefore: "always",
+          emptyLineBefore: "threshold",
           noEmptyLineBetween: true,
           properties: [
             "transition",
@@ -340,7 +346,8 @@ module.exports = {
       {
         severity: "warning",
         unspecified: "bottomAlphabetical",
-        emptyLineBeforeUnspecified: "always",
+        emptyLineBeforeUnspecified: "threshold",
+        emptyLineMinimumPropertyThreshold: 4
       }
     ]
   }

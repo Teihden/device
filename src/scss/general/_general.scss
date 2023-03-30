@@ -94,7 +94,6 @@ main {
 // Links
 .states-default {
   display: block;
-
   text-decoration: none;
 
   &:hover {
@@ -107,7 +106,6 @@ main {
 
   &:active {
     outline: none;
-
     opacity: 0.3;
   }
 
@@ -116,7 +114,6 @@ main {
 
     &:hover {
       outline: none;
-
       opacity: 0.1;
     }
 
@@ -205,7 +202,6 @@ main {
 
   &:hover {
     border-color: transparent;
-
     background: $black;
     color: $white;
   }

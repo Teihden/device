@@ -21,11 +21,10 @@
 
   text-decoration-skip-ink: none;
   text-underline-offset: 1px;
-  text-underline-position: underline;
+  text-underline-position: auto;
 
   &:hover {
     color: $yellow-dark;
-
     text-decoration-color: $yellow-dark;
   }
 
@@ -70,7 +69,6 @@
 
 .footer-logo-link {
   grid-column: 1 / -1;
-
   width: 145px;
   height: 36px;
 
@@ -81,7 +79,6 @@
 
 .address {
   margin: 0;
-
   font-size: 16px;
   line-height: 20px;
 
@@ -100,9 +97,7 @@
 
   a {
     display: block;
-
     color: $white;
-
     text-decoration: none;
 
     &:hover {
@@ -150,7 +145,7 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  
+
   background-color: rgb(255 255 255 / 30%);;
 
   &:hover {
@@ -215,7 +210,6 @@
   &:active {
     color: $white;
     outline: none;
-
     opacity: 0.3;
   }
 }

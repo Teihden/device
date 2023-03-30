@@ -81,7 +81,6 @@
 
       &:hover {
         outline: none;
-
         opacity: 0.1;
       }
 
@@ -136,7 +135,6 @@
 
 .modal-name-label {
   display: block;
-
   margin-bottom: 14px;
 }
 
@@ -162,7 +160,6 @@
   &:not(:placeholder-shown):invalid+ {
     .modal-hint {
       color: $error;
-
       opacity: 1;
     }
   }
@@ -178,7 +175,6 @@
 
 .modal-delivery {
   display: flex;
-
   column-gap: 40px;
 }
 
@@ -189,7 +185,6 @@
 .modal-object {
   display: flex;
   flex-direction: column;
-
   width: 540px;
 
   span {
@@ -203,13 +198,11 @@
 
 .modal-quantity-group {
   position: relative;
-
   width: 180px;
 }
 
 .modal-quantity {
   display: block;
-
   margin-bottom: 14px;
 }
 
@@ -282,7 +275,6 @@
 .modal-quantity-input {
   width: 180px;
   padding: 20px 60px;
-
   text-align: center;
 }
 
@@ -296,7 +288,6 @@
   span {
     width: 16px;
     height: 2px;
-
     background-image: url("../img/icons/minus.svg");
   }
 }
@@ -307,7 +298,6 @@
   span {
     width: 16px;
     height: 16px;
-
     background-image: url("../img/icons/plus.svg");
   }
 }
@@ -356,7 +346,6 @@
 
     &:hover {
       outline: none;
-
       opacity: 0.3;
     }
 

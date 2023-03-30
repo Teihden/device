@@ -1,7 +1,6 @@
 .features-list {
   margin-bottom: 70px;
   padding-bottom: 72px;
-
   background: linear-gradient($light, $light) no-repeat left 102px;
 }
 
@@ -40,22 +39,22 @@
       background-color: transparent;
     }
   }
+}
 
-  .active {
-    width: 100%;
+.tab-active {
+  width: 100%;
 
+  background-color: $black;
+  color: $yellow-light;
+
+  transition: padding 0.2s ease-out 0.3s;
+
+  &::before {
+    display: none;
+  }
+
+  &:hover {
     background-color: $black;
-    color: $yellow-light;
-
-    transition: padding 0.2s ease-out 0.3s;
-
-    &::before {
-      display: none;
-    }
-
-    &:hover {
-      padding-left: 35px;
-    }
   }
 }
 
@@ -196,7 +195,6 @@
 
   &:active {
     outline: none;
-
     opacity: 0.3;
   }
 }

@@ -1,7 +1,7 @@
 const { src, dest, parallel, series, watch } = require("gulp");
-const stylelint = require("gulp-stylelint");
+const stylelint = require("@ronilaukkarinen/gulp-stylelint");
 const sass = require("gulp-sass")(require("sass"));
-const pugLinter = require('gulp-pug-linter');
+const pugLinter = require("gulp-pug-linter");
 const pug = require("gulp-pug");
 const browserSync = require("browser-sync").create();
 const purgecss = require("gulp-purgecss");
@@ -21,11 +21,12 @@ const browserSyncJob = () => {
 const lintBuildSass = () => {
   console.log("Проверка линтером Sass, компиляция SASS");
 
-  return src("src/scss/*.scss")
+  return src("src/scss/**/*.scss")
     .pipe(stylelint({
+      configFile: "./.stylelintrc.js",
       failAfterError: true,
       reporters: [
-        { formatter: 'string', console: true }
+        { formatter: "string", console: true }
       ],
       fix: true
     }))
@@ -60,7 +61,7 @@ function lintPug() {
 
   return src("src/pug/pages/*.pug")
     .pipe(pugLinter({
-      reporter: 'puglint-stylish',
+      reporter: "puglint-stylish",
       failAfterError: true
     }));
 }

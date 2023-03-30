@@ -12,7 +12,7 @@ header.page-header
         label.search-label
           if page === "index"
             input.search-input#search(type="search" name="search-page" placeholder="Поиск по сайту" required)
-          if page === "monopods"
+          if page === "catalog-monopods"
             input.search-input#search(type="search" name="search-page" placeholder="Поиск по сайту" value="Текст поиска" required)
           span.visually-hidden Поиск по сайту
         button.search-button.button-transparent.place-center(type="submit") #[span Найти]
@@ -20,37 +20,37 @@ header.page-header
         li.login
           if page === "index"
             a.states-default.user-link.login-link(href="#no_scroll") Войти
-          if page === "monopods"
+          if page === "catalog-monopods"
             a.states-default.user-link.login-link(href="#no_scroll") Коля Петухов
         if page === "index"
           li.closed
-            a.states-default.user-link.logout-link(href="#no_scroll") Выйти
-        if page === "monopods"
+            a.states-default.user-link.logout-link(href="#no_scroll") #[span Выйти]
+        if page === "catalog-monopods"
           li
-            a.states-default.user-link.logout-link(href="#no_scroll") Выйти
+            a.states-default.user-link.logout-link(href="#no_scroll") #[span Выйти]
         li.compare
           a.states-default.user-link.compare-link(href="#no_scroll") Сравнить
         li.cart
-          a.states-default.user-link.cart-link(href="#no_scroll") #[span.place-center 2] Корзина
-          .shopping-cart
+          a.states-default.user-link.cart-link(href="#no_scroll") #[span.cart-output-quantity.place-center 2] Корзина
+          .shopping-cart#shopping-cart
             ul
-              li.cart-item
-                a.states-default.cart-item-link
-                  img(src="img/shopping-cart/product-1.jpg" width="39" height="43" alt="Любительская селфи-палка.")
+              li.cart-item(data-price="800")
+                a.states-default.cart-item-link(href="#no_scroll")
+                  img(src="img/shopping-cart/shopping-cart-product-0.jpg" width="39" height="43" alt="Любительская селфи-палка.")
                   p Любительская селфи-палка
-                button.states-default(type="button" aria-label="Закрыть.")
-              li.cart-item
-                a.states-default.cart-item-link
-                  img(src="img/shopping-cart/product-2.jpg" width="39" height="43" alt="Профессиональная селфи-палка.")
+                button.states-default.cart-button-close(type="button" aria-label="Закрыть.")
+              li.cart-item(data-price="1200")
+                a.states-default.cart-item-link(href="#no_scroll")
+                  img(src="img/shopping-cart/shopping-cart-product-1.jpg" width="39" height="43" alt="Профессиональная селфи-палка.")
                   p Профессиональная селфи-палка
-                button.states-default(type="button" aria-label="Закрыть.")
+                button.states-default.cart-button-close(type="button" aria-label="Закрыть.")
             .summary
               p
                 span Товаров:
-                output 2
+                output.cart-output-quantity 2
               p
                 span Сумма:
-                output 2000 ₽
+                output.cart-output-price 2000 ₽
             a.cart-link-more.place-center.heading-2(href="#no_scroll") #[span Открыть корзину]
     ul.header-navigation-list
       li.catalog-list
@@ -60,7 +60,7 @@ header.page-header
             li
               a.states-default(href="#no_scroll") Виртуальная реальность
             li
-              if page === "monopods"
+              if page === "catalog-monopods"
                 a.states-default.catalog-link-active(href="catalog-monopods.html") Моноподы для cелфи
               else
                 a.states-default(href="catalog-monopods.html") Моноподы для cелфи

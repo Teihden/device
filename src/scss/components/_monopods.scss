@@ -22,7 +22,6 @@
 
   li {
     position: relative;
-
     font-size: 16px;
     line-height: 20px;
   }
@@ -59,7 +58,6 @@
 
 .monopods-container {
   display: flex;
-
   width: 1160px;
   margin: 0 auto;
 
@@ -232,7 +230,6 @@
   ul {
     margin: 0;
     padding: 0;
-
     list-style: none;
   }
 
@@ -282,7 +279,6 @@
   ul {
     margin: 0;
     padding: 0;
-
     list-style: none;
   }
 
@@ -402,7 +398,6 @@
 
     &:active {
       outline: none;
-
       opacity: 1;
     }
 
@@ -412,7 +407,6 @@
 
       &:hover {
         outline: none;
-
         opacity: 0.1;
       }
 
@@ -429,7 +423,6 @@
 
 .goods {
   padding: 70px 40px 78px;
-
   background-color: $white;
 }
 
@@ -446,7 +439,6 @@
   img {
     display: block;
     grid-column: 1 / -1;
-
     margin-bottom: 32px;
   }
 
@@ -616,9 +608,7 @@
 
   &:active {
     border-color: $black;
-
     outline: none;
-
     opacity: 0.3;
   }
 
@@ -628,7 +618,6 @@
 
     &:hover {
       outline: none;
-
       opacity: 0.1;
     }
 
@@ -638,7 +627,6 @@
 
     &:active {
       outline: none;
-
       opacity: 0.1;
     }
   }
@@ -647,7 +635,6 @@
 .pagination {
   display: flex;
   justify-content: space-between;
-
   background-color: $light-gray;
 }
 
@@ -655,7 +642,6 @@
   @include button-default;
 
   padding: 25px;
-
   color: $dark;
 
   &:hover {
@@ -731,7 +717,6 @@
 
   &:active {
     outline: none;
-
     opacity: 0.1;
   }
 
@@ -750,7 +735,6 @@
 
     &:active {
       outline: none;
-
       opacity: 0.6;
     }
   }

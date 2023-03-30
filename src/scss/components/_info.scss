@@ -1,6 +1,5 @@
 .info {
   display: flex;
-
   width: 1160px;
   margin: 0 auto 70px;
 
@@ -28,7 +27,6 @@
 .shippers {
   margin: 0 0 30px;
   padding-left: 37.5px;
-
   list-style: none;
 
   li {
@@ -71,7 +69,6 @@
 
 .contacts {
   flex-shrink: 0;
-
   width: 532px;
 
   h4 {
@@ -100,7 +97,6 @@
 
     &:active {
       outline: none;
-
       opacity: 0.3;
     }
   }
@@ -112,13 +108,15 @@
 
 .location {
   margin: 0;
-
   font-style: normal;
 }
 
 .working-time {
   margin: 0 0 30px;
   padding: 0;
-
   list-style: none;
+}
+
+.contacts-email {
+  width: 259px;
 }
