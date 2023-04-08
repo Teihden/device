@@ -1,37 +1,7 @@
-// Shopping-cart
-const shoppingCart = document.getElementById('shopping-cart');
-const cartItems = shoppingCart.querySelectorAll(':scope .cart-item');
-
-function closeCartItemEvent(e) {
-  const cartItem = e.currentTarget;
-  const priceItem = +cartItem.dataset.price;
-  const elementTrigger = e.target;
-
-  if (!elementTrigger.classList.contains('cart-button-close')) {
-    return;
-  }
-
-  const cartOutputPrice = document.querySelector('.cart-output-price');
-  const outputPrice = +cartOutputPrice.textContent.split(' ')[0];
-  const resultOutputPrice = outputPrice - priceItem;
-
-  const cartsOutputQuantity = document.querySelectorAll('.cart-output-quantity');
-  for (let i = 0; i < cartsOutputQuantity.length; i += 1) {
-    cartsOutputQuantity[i].textContent -= 1;
-  }
-
-  cartOutputPrice.textContent = `${resultOutputPrice} ₽`;
-  cartItem.remove();
-}
-
-for (let i = 0; i < cartItems.length; i += 1) {
-  cartItems[i].addEventListener('click', closeCartItemEvent);
-}
-
 // Carousel
 const carousel = {
-  productsList: document.querySelector('.slider .products-list'),
-  slides: document.querySelectorAll('.products-list li'),
+  productsList: document.querySelector('.slider .product-list'),
+  slides: document.querySelectorAll('.product-list li'),
   buttonNext: document.querySelector('.slider .button-next'),
   buttonPrevious: document.querySelector('.slider .button-previous'),
   articles: document.querySelectorAll('.articles li'),
@@ -69,7 +39,7 @@ const carousel = {
 
       setTimeout(() => {
         for (let i = this.minIndex; i <= this.maxIndex; i += 1) {
-          const slideToRemove = this.productsList.children[0];
+          const slideToRemove = this.productsList.firstElementChild;
           this.productsList.removeChild(slideToRemove);
         }
 
@@ -90,7 +60,7 @@ const carousel = {
         positionX = this.maxIndex * 560;
         this.productsList.style.transition = transition;
         this.productsList.style.transform = `translateX(-${positionX}px)`;
-      }, 1);
+      }, 0);
 
       setTimeout(() => {
         for (let i = this.minIndex; i <= this.maxIndex; i += 1) {
@@ -128,11 +98,12 @@ const carousel = {
     sliderButton.setAttribute('disabled', '');
     clearInterval(this.intervalID);
     this.goToSlide(numberOfSlidesToMove);
-    this.initAutoplay();
 
     setTimeout(() => {
       sliderButton.removeAttribute('disabled');
     }, this.transitionDuration);
+
+    this.initAutoplay();
   },
 
   init() {
@@ -161,24 +132,3 @@ const carousel = {
 };
 
 window.addEventListener('load', () => carousel.init());
-
-// Features-tabs
-const tabs = document.querySelector('.tabs');
-const tabsButtons = tabs.querySelectorAll(':scope button');
-
-function openTabEvent() {
-  const tabActiveButton = tabs.querySelector(':scope button.tab-active');
-  const idFeatureToOpen = this.dataset.item;
-  const idFeatureToClose = tabActiveButton.dataset.item;
-  const featureItemToOpen = document.getElementById(idFeatureToOpen);
-  const featureItemToClose = document.getElementById(idFeatureToClose);
-
-  tabActiveButton.classList.remove('tab-active');
-  featureItemToClose.classList.add('closed');
-  this.classList.add('tab-active');
-  featureItemToOpen.classList.remove('closed');
-}
-
-for (let i = 0; i < tabsButtons.length; i += 1) {
-  tabsButtons[i].addEventListener('click', openTabEvent);
-}

@@ -1,80 +1,80 @@
-const { src, dest, parallel, series, watch } = require("gulp");
-const stylelint = require("@ronilaukkarinen/gulp-stylelint");
-const sass = require("gulp-sass")(require("sass"));
-const pugLinter = require("gulp-pug-linter");
-const pug = require("gulp-pug");
-const browserSync = require("browser-sync").create();
-const purgecss = require("gulp-purgecss");
-const autoprefixer = require("autoprefixer");
-const postcss = require("gulp-postcss");
+const { src, dest, parallel, series, watch } = require('gulp');
+const stylelint = require('@ronilaukkarinen/gulp-stylelint');
+const sass = require('gulp-sass')(require('sass'));
+const pugLinter = require('gulp-pug-linter');
+const pug = require('gulp-pug');
+const browserSync = require('browser-sync').create();
+const purgecss = require('gulp-purgecss');
+const autoprefixer = require('autoprefixer');
+const postcss = require('gulp-postcss');
 
 const browserSyncJob = () => {
   browserSync.init({
-    server: "build/",
-    open: false
+    server: 'build/',
+    open: false,
   });
 
-  watch("src/scss/**/*.scss", series(lintBuildSass));
-  watch("src/pug/**/*.pug", series(lintPug, buildPug));
+  watch('src/scss/**/*.scss', series(lintBuildSass));
+  watch('src/pug/**/*.pug', series(lintPug, buildPug));
 };
 
 const lintBuildSass = () => {
-  console.log("Проверка линтером Sass, компиляция SASS");
+  console.log('Проверка линтером Sass, компиляция SASS');
 
-  return src("src/scss/**/*.scss")
+  return src('src/scss/**/*.scss')
     .pipe(stylelint({
-      configFile: "./.stylelintrc.js",
+      configFile: './.stylelintrc.js',
       failAfterError: true,
       reporters: [
-        { formatter: "string", console: true }
+        { formatter: 'string', console: true },
       ],
-      fix: true
+      fix: true,
     }))
     .pipe(sass({
-      outputStyle: "expanded" // compressed | expanded
+      outputStyle: 'expanded', // compressed | expanded
     }))
-    .pipe(dest("build/css/"));
+    .pipe(dest('build/css/'));
 };
 
 const purgeCSS = () => {
-  console.log("запуск PurgeCSS");
+  console.log('запуск PurgeCSS');
 
-  return src("build/css/*.css")
+  return src('build/css/*.css')
     .pipe(purgecss({
-      content: ["build/*.html"],
-      variables: true
+      content: ['build/*.html'],
+      variables: true,
     }))
-    .pipe(dest("build/css"));
+    .pipe(dest('build/css'));
 };
 
 const postCSS = () => {
-  console.log("запуск Autoprefixer");
+  console.log('запуск Autoprefixer');
 
-  return src("build/css/*.css")
+  return src('build/css/*.css')
     .pipe(postcss([autoprefixer()]))
-    .pipe(dest("build/css"))
+    .pipe(dest('build/css'))
     .pipe(browserSync.stream());
 };
 
 function lintPug() {
-  console.log("Проверка линтером Pug");
+  console.log('Проверка линтером Pug');
 
-  return src("src/pug/pages/*.pug")
+  return src('src/pug/pages/*.pug')
     .pipe(pugLinter({
-      reporter: "puglint-stylish",
-      failAfterError: true
+      reporter: 'puglint-stylish',
+      failAfterError: true,
     }));
 }
 
 const buildPug = () => {
-  console.log("Компиляция Pug");
+  console.log('Компиляция Pug');
 
-  return src("src/pug/pages/*.pug")
+  return src('src/pug/pages/*.pug')
     .pipe(pug({
       pretty: true, // null | true
-      doctype: "html"
+      doctype: 'html',
     }))
-    .pipe(dest("build/"))
+    .pipe(dest('build/'))
     .pipe(browserSync.stream());
 };
 

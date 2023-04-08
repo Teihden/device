@@ -21,7 +21,7 @@
   width: 560px;
 }
 
-.products-list {
+.product-list {
   display: flex;
 
   margin: 0;
@@ -29,9 +29,11 @@
 
   list-style-type: none;
 
-  img {
-    display: block;
-  }
+
+}
+
+.product-preview-image {
+  display: block;
 }
 
 .slider {
@@ -119,7 +121,7 @@
   }
 }
 
-.article-3 {
+.article-2 {
   dl {
     gap: 20px 40px;
   }

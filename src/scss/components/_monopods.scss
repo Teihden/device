@@ -351,6 +351,7 @@
     background-image: url("../img/icons/select-arrow.svg");
     background-position: right 11px center;
     background-repeat: no-repeat;
+    color: inherit;
 
     font-size: 18px;
     font-family: inherit;
@@ -444,10 +445,6 @@
 
   h3 {
     margin: 0;
-
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 20px;
   }
 }
 
@@ -587,6 +584,7 @@
   border: 3px solid $mercury;
 
   background-color: transparent;
+  color: inherit;
 
   font-weight: 800;
   font-size: 16px;

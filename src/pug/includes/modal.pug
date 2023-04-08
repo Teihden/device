@@ -6,18 +6,18 @@ section.modal#modal(hidden)
     form(action="https://echo.htmlacademy.ru/" method="post")
       ul.modal-user
         li
-          label.modal-name-label(for="modal-name") Ваше имя:
+          label.heading-4.modal-name-label(for="modal-name") Ваше имя:
           input.modal-name-input#modal-name(type="text" name="modal-name" placeholder="Введите имя" required)
         li
-          label.modal-name-label(for="modal-email") Ваш e-mail:
+          label.heading-4.modal-name-label(for="modal-email") Ваш e-mail:
           input.modal-email-input#modal-email(type="email" name="modal-email" value="почта" placeholder="Ваш e-mail" required)
           p.modal-hint Забавный у вас адрес
       .modal-delivery
-        label.modal-object
+        label.heading-4.modal-object
           span Что нужно привезти:
           input.modal-object-input#modal-object-input(type="text" name="modal-object-input" placeholder="В свободной форме" required)
         .modal-quantity-group
-          label.modal-quantity(for="modal-quantity-input") Количество:
+          label.heading-4.modal-quantity(for="modal-quantity-input") Количество:
           .modal-tooltip
             span.modal-button-tooltip
             p.modal-tooltip-text Постараемся найти, сколько нужно. Привезём сколько получится по требованиям к провозу багажа.

@@ -2,13 +2,13 @@ section.hero
   h2.visually-hidden Превью товаров
   .slider
     .slider-container
-      ol.products-list
-        li.products-item-0
-          img(src="img/hero/product-0.svg" width="560" height="560" alt="Квадрокоптер.")
-        li.products-item-1
-          img(src="img/hero/product-1.svg" width="560" height="560" alt="Фитнес-браслеты" aria-hidden="true")
-        li.products-item-2
-          img(src="img/hero/product-2.svg" width="560" height="560" alt="Палка для селфи." aria-hidden="true")
+      ol.product-list
+        li.product-preview
+          img.product-preview-image(src="img/hero/product-0.svg" width="560" height="560" alt="Квадрокоптер.")
+        li.product-preview
+          img.product-preview-image(src="img/hero/product-1.svg" width="560" height="560" alt="Фитнес-браслеты" aria-hidden="true")
+        li.product-preview
+          img.product-preview-image(src="img/hero/product-2.svg" width="560" height="560" alt="Палка для селфи." aria-hidden="true")
     button.states-default.button-previous(type="button" aria-label="Предыдущее фото.")
     button.states-default.button-next(type="button" aria-label="Следующее фото.")
   ol.articles
@@ -35,7 +35,7 @@ section.hero
           .group
             dt 48 часов
             dd Без подзарядки
-    li.closed.article-3#article-2(data-count="03")
+    li.closed.article-2#article-2(data-count="03")
       article
         h3.visually-hidden Палка для селфи
         p.heading-1 Делай селфи, #[br] как Бен Стиллер!

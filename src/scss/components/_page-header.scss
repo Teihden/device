@@ -129,7 +129,7 @@
   span {
     opacity: 0.3;
   }
-  
+
 }
 
 .compare {
@@ -373,7 +373,7 @@
     width: 50px;
     height: 51px;
 
-    background-image: url("../img/icons/list-opened.svg");
+    background-image: url("../img/icons/list-closed.svg");
     background-repeat: no-repeat;
 
     opacity: 0.3;
@@ -387,31 +387,20 @@
 
   &:focus {
     @include focus-default;
+
+    &::after {
+      background-image: url("../img/icons/list-opened.svg");
+      opacity: 1;
+    }
   }
 
   &:active {
     outline: none;
 
     &::after {
+      background-image: url("../img/icons/list-opened.svg");
       opacity: 1;
     }
-  }
-}
-
-.catalog-heading-closed {
-  &::after {
-    content: '';
-    position: absolute;
-    top: -1px;
-    right: 0;
-
-    width: 50px;
-    height: 51px;
-
-    background-image: url("../img/icons/list-closed.svg");
-    background-repeat: no-repeat;
-
-    opacity: 0.3;
   }
 }
 
@@ -438,6 +427,7 @@
   }
 }
 
+.catalog-heading:active+,
 .catalog-heading:focus+ {
   .catalog-container {
     display: flex;

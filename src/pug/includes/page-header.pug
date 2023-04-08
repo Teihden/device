@@ -2,7 +2,7 @@ header.page-header
   h2.visually-hidden Навигация по сайту
   nav
     if page === "index"
-      a.states-default.header-logo-link
+      a.states-default.header-logo-link(href="#no_scroll")
         img(src="img/logos/logo-header.svg" width="145" height="36" alt="Логотип магазина Device.")
     else
       a.states-default.header-logo-link(href="index.html")
@@ -54,7 +54,7 @@ header.page-header
             a.cart-link-more.place-center.heading-2(href="#no_scroll") #[span Открыть корзину]
     ul.header-navigation-list
       li.catalog-list
-        a.heading-2.catalog-heading.catalog-heading-closed(href="#no_scroll") Каталог товаров
+        a.heading-2.catalog-heading(href="#no_scroll") Каталог товаров
         .catalog-container
           ul.catalog-sublist
             li
