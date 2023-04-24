@@ -5,27 +5,23 @@
 ## Setup
 
 ```shell
-# Install dependencies (with flag "--force")
+# Install dependencies
 make install
 ```
 
 ## CLI
 
 ```shell
-# Runs Stylelint, pug-lint against source code for quality
+# Runs Stylelint, pug-lint, Eslint against source code for quality
 make lint
 ```
 
 ## Gulp tasks
 
 ```shell
-# Starts Browsersync server and watch Sass, Pug files for changes
-server
+# To package a site for production run
+npx gulp build
 
-# Runs pug-lint, Pug, Stylelint, Sass, PurgeCSS, Autoprefixer in sequential order
-build
-
-# Runs pug-lint, Pug, Stylelint, Sass, starts Browsersync server
-# in sequential order and wathes for changes
-default
+# To get started developing a site with a development server (default task)
+npx gulp
 ```

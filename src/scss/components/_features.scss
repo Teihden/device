@@ -164,7 +164,7 @@
     margin: 0 43px 0 35px;
     border-radius: 50%;
 
-    background-color: rgb(220 220 220 / 50%);
+    background-color: color.adjust($gray, $alpha: -0.5);
     color: $black;
 
     svg {

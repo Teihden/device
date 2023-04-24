@@ -142,7 +142,7 @@
   cursor: pointer;
 
   &:hover {
-    border-color: rgb(0 0 0 / 50%);
+    border-color: color.adjust($black, $alpha: -0.5);
   }
 
   &:focus {
@@ -200,7 +200,7 @@
     border: none;
 
     background-color: transparent;
-    color: rgb(0 0 0 / 30%);
+    color: color.adjust($black, $alpha: -0.7);
 
     font-size: 14px;
     font-family: inherit;
@@ -527,7 +527,7 @@
       width: 360px;
       height: 380px;
 
-      background-color: rgb(240 240 240 / 80%);
+      background-color: color.adjust($light, $alpha: -0.2);
     }
 
     h3 {
@@ -556,7 +556,7 @@
       width: 360px;
       height: 380px;
 
-      background-color: rgb(240 240 240 / 80%);
+      background-color: color.adjust($light, $alpha: -0.2);
     }
 
     h3 {

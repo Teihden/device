@@ -146,7 +146,7 @@
   height: 40px;
   border-radius: 50%;
 
-  background-color: rgb(255 255 255 / 30%);;
+  background-color: color.adjust($white, $alpha: -0.7);;
 
   &:hover {
     background-color: $yellow-dark;
