@@ -1,5 +1,5 @@
 install:
-	npm ci
+	npm ci --force
 
 lint:
 	npx stylelint ./src/scss/**/*.scss --fix --color
