@@ -6,9 +6,8 @@ import stylelint from '@ronilaukkarinen/gulp-stylelint';
 import pug from 'gulp-pug';
 import pugLinter from 'gulp-pug-linter';
 import imagemin from 'gulp-imagemin';
-import { deleteSync } from 'del';
+import { deleteAsync } from 'del';
 import browserSyncJob from 'browser-sync';
-import purgecss from 'gulp-purgecss';
 import autoprefixer from 'autoprefixer';
 import postcss from 'gulp-postcss';
 import eslint from 'gulp-eslint';
@@ -17,20 +16,19 @@ const browserSync = browserSyncJob.create();
 const sass = gulpSass(dartSass);
 
 function imageMin(cb) {
-  gulp.src('src/apple-touch-icon.png', { since: gulp.lastRun(imageMin), allowEmpty: true })
+  gulp.src(['src/img/**/*', 'src/apple-touch-icon.png'], {
+    since: gulp.lastRun(imageMin),
+    base: 'src',
+  })
     .pipe(imagemin())
-    .pipe(gulp.dest('build/'));
-
-  gulp.src('src/img/**/*', { since: gulp.lastRun(imageMin) })
-    .pipe(imagemin())
-    .pipe(gulp.dest('build/img'))
+    .pipe(gulp.dest('build'))
     .pipe(browserSync.stream());
 
   cb();
 }
 
-async function clean() {
-  return deleteSync(['build/']);
+function clean() {
+  return deleteAsync(['build/']);
 }
 
 function copyMisc() {
@@ -89,15 +87,6 @@ function compileSass() {
     .pipe(browserSync.stream());
 }
 
-function purgeCSS() {
-  return gulp.src('build/css/*.css')
-    .pipe(purgecss({
-      content: ['build/*.html'],
-      variables: true,
-    }))
-    .pipe(gulp.dest('build/css'));
-}
-
 function postCSS() {
   return gulp.src('build/css/*.css')
     .pipe(postcss([autoprefixer()]))
@@ -133,6 +122,13 @@ function watcher() {
 }
 
 gulp.task(
+  'server',
+  gulp.series(
+    browsersync,
+  ),
+);
+
+gulp.task(
   'copy',
   gulp.series(
     copyFonts,
@@ -145,7 +141,7 @@ gulp.task(
   gulp.series(
     clean,
     gulp.series(lintPug, compilePug),
-    gulp.series(lintSass, compileSass, purgeCSS, postCSS),
+    gulp.series(lintSass, compileSass, postCSS),
     gulp.series(lintJS, copyJS),
     'copy',
     imageMin,
